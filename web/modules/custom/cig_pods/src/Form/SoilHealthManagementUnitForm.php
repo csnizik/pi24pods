@@ -1026,8 +1026,6 @@ class SoilHealthManagementUnitForm extends PodsFormBase {
     $producer = \Drupal::entityTypeManager()->getStorage('asset')->load($form_state->getValue('field_shmu_involved_producer'));
     $this->setAwardReference($shmu, $producer->get('award')->target_id);
 
-    // dpm($form_state->get('irrigation_redirect'));
-
     if ($form_state->get('irrigation_redirect')) {
       $form_state->setRedirect('cig_pods.irrigation_shmu_form', ['shmu' => $shmu->get('id')->value]);
     }

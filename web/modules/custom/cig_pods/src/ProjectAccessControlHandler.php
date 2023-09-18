@@ -7,6 +7,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\entity\UncacheableEntityAccessControlHandler;
 use Drupal\views\Plugin\views\ViewsHandlerInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * PODS project access control handler.
@@ -81,6 +82,47 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
 
     return False;
   }
+
+    /**
+   * Checks to see if the user is a Project Manager.
+   *
+   * @return bool
+   *   Returns TRUE if the user has an awardee Role and is marked as a project administrator on an award. 
+   *   FALSE otherwise.
+   */
+  public static function isProjectManager() {
+    if(self::isAwardee()){
+      if(!empty(self::awardeeManagerProjectAccess(self::getEauthId()))){
+        return TRUE;
+      }
+
+    }
+
+    return False;
+  }
+
+   /**
+   * Returns the count of the Project or Award entities that exist for a Project Manager.
+   *
+   * @return int
+   */
+  public static function projectManagerEntityCounts(bool $isProject) {
+    if($isProject){
+      return count(self::awardeeManagerProjectAccess(self::getEauthId()));
+    }else{
+      return count(self::awardeeManagerAwardAccess(self::getEauthId()));
+    }
+  }
+
+  /**
+   * Returns the an array of award ID's that a project Manager has access to.
+   *
+   * @return array
+   */
+  public static function getProjectManagerAwardEntities() {
+    return self::awardeeManagerAwardAccess(self::getEauthId());
+  }
+
 
   /**
    * {@inheritdoc}
@@ -165,6 +207,128 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
     // Return the result.
     return $result;
   }
+   /**
+   * Query to find the Awards that an Project Admin has access too.
+   *
+   * @param string $eauth_id
+   *   The eAuth ID.
+   * @param string|null $asset_type
+   *   The asset type to filter by.
+   *
+   * @return array
+   *   Returns an array of asset IDs.
+   */
+  public static function awardeeManagerAwardAccess($eauth_id) {
+
+    $term_arr = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->
+    loadByProperties(['name' => 'Awardee Administrative']);
+    $administrative_taxonomy_id = array_keys($term_arr)[0];
+
+    // Query the asset__award table, where each row is a relationship between
+    // an asset and a award.
+    $query = \Drupal::database()->select('asset', 'at');
+
+    // Select the asset entity IDs.
+    $query->addField('at', 'id');
+
+    // Filter by asset type.
+    $query->condition('at.type', 'award');
+
+    // Join the asset__award table again, this time to get contacts that
+    // reference the same award.
+    $query->join('asset__award', 'aac', "at.id = aac.award_target_id AND aac.bundle = 'contact' AND aac.deleted != 1");
+
+    // Select the asset entity IDs.
+    $query->addField('aac', 'entity_id');
+
+    // Join the asset__eauth_id table, which assigns eAuth IDs to contact
+    // assets.
+    $query->join('asset__eauth_id', 'aei', "aac.entity_id = aei.entity_id AND aei.deleted != 1");
+
+    // Join the asset__field_contact_type table, which keeps track of what type of contact they are.
+    // the "Awardee Administrative" Contact type being the one we need.
+    $query->join('asset__field_contact_type', 'fct', 'aac.entity_id = fct.entity_id AND fct.deleted !=1');
+
+    // Filter by the eAuth ID field on the contact asset.
+    $query->condition('aei.eauth_id_value', $eauth_id);
+
+    //Filter by the contact type target ID on each contact asset.
+    $query->condition('fct.field_contact_type_target_id', $administrative_taxonomy_id);
+
+    // Execute the query.
+    $result = $query->execute();
+
+    // Return an array of unique asset IDs.
+    $asset_ids = [];
+    foreach ($result as $row) {
+      if (!empty($row->id)) {
+        $asset_ids[] = $row->id;
+      }
+    }
+    return $asset_ids;
+  }
+
+
+  /**
+   * Query to find the projectthat an Project Manager has access too.
+   *
+   * @param string $eauth_id
+   *   The eAuth ID.
+   * @param string|null $asset_type
+   *   The asset type to filter by.
+   *
+   * @return array
+   *   Returns an array of asset IDs.
+   */
+  public static function awardeeManagerProjectAccess($eauth_id) {
+
+    $term_arr = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->
+    loadByProperties(['name' => 'Awardee Administrative']);
+    $administrative_taxonomy_id = array_keys($term_arr)[0];
+
+    // Query the asset__award table, where each row is a relationship between
+    // an asset and a award.
+    $query = \Drupal::database()->select('asset__award', 'aa');
+
+    // Select the asset entity IDs.
+    $query->addField('aa', 'entity_id', 'id');
+
+    // Exclude deleted fields.
+    $query->condition('aa.deleted', 1, '!=');
+
+    // Filter by asset type.
+    $query->condition('aa.bundle', 'project');
+
+    // Join the asset__award table again, this time to get contacts that
+    // reference the same award.
+    $query->join('asset__award', 'aac', "aa.award_target_id = aac.award_target_id AND aac.bundle = 'contact' AND aac.deleted != 1");
+
+    // Join the asset__eauth_id table, which assigns eAuth IDs to contact
+    // assets.
+    $query->join('asset__eauth_id', 'aei', "aac.entity_id = aei.entity_id AND aei.deleted != 1");
+
+    // Join the asset__field_contact_type table, which keeps track of what type of contact they are.
+    // the "Awardee Administrative" Contact type being the one we need.
+    $query->join('asset__field_contact_type', 'fct', 'aac.entity_id = fct.entity_id AND fct.deleted !=1');
+
+    // Filter by the eAuth ID field on the contact asset.
+    $query->condition('aei.eauth_id_value', $eauth_id);
+
+    //Filter by the contact type target ID on each contact asset.
+    $query->condition('fct.field_contact_type_target_id', $administrative_taxonomy_id);
+
+    // Execute the query.
+    $result = $query->execute();
+
+    // Return an array of unique asset IDs.
+    $asset_ids = [];
+    foreach ($result as $row) {
+      if (!empty($row->id)) {
+        $asset_ids[] = $row->id;
+      }
+    }
+    return $asset_ids;
+  }
 
   /**
    * Query to find assets that an eAuth ID has access to.
@@ -226,7 +390,7 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
    * @param \Drupal\views\Plugin\views\ViewsHandlerInterface $handler
    *   The Views handler.
    */
-  public static function viewsArgumentQueryAlter(ViewsHandlerInterface $handler) {
+  public static function viewsArgumentQueryAlter(ViewsHandlerInterface $handler, bool $isManager, bool $isProject) {
 
     // Get the user's eAuthID and Roles.
     $eauth_id = ProjectAccessControlHandler::getEauthId();
@@ -260,7 +424,15 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
       // query modifications very simple. It only needs the condition:
       // "WHERE asset.id IN (:asset_ids)", rather than add a bunch of extra
       // JOINs (and duplicate the logic in the helper method).
-      $asset_ids = ProjectAccessControlHandler::eAuthIdAssets($eauth_id, $asset_type);
+      $asset_ids = [];
+      if($isManager && $isProject){
+        $asset_ids = ProjectAccessControlHandler::awardeeManagerProjectAccess($eauth_id, $asset_type);
+      }elseif($isManager && !$isProject){
+        $asset_ids = ProjectAccessControlHandler::awardeeManagerAwardAccess($eauth_id, $asset_type);
+      }
+      else{
+        $asset_ids = ProjectAccessControlHandler::eAuthIdAssets($eauth_id, $asset_type);
+      }
 
       // If there are no asset IDs, add 0 to ensure the array is not empty.
       if (empty($asset_ids)) {

@@ -60,8 +60,8 @@ class PodsDashboardForm extends PodsFormBase {
       '#type' => 'select',
       '#options' => [
         '' => $this->t('Create New'),
-        'create_award' => $this->t('Award'),
         'create_awardee' => $this->t('Awardee Org'),
+        'create_award' => $this->t('Award'),
         'create_project' => $this->t('Project'),
       ],
       '#attributes' => [
@@ -102,17 +102,17 @@ class PodsDashboardForm extends PodsFormBase {
       $entityCount[] = count($entities);
     }
     
-    $form['awardee_award'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Award(s): @count', ['@count' => $entityCount[2]]),
-      '#name' => 'award',
-    ];
-        
     $form['awardee_org'] = [
       '#type' => 'submit',
       '#value' => $this->t('Awardee Organization(s): @count', ['@count' => $entityCount[1]]),
       '#name' => 'awardee',
     ];
+  
+    $form['awardee_award'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Award(s): @count', ['@count' => $entityCount[2]]),
+      '#name' => 'award',
+    ];      
 
     $form['awardee_proj'] = [
       '#type' => 'submit',
@@ -127,11 +127,13 @@ class PodsDashboardForm extends PodsFormBase {
    * Build the dashboard form for awardees.
    */
   public function buildAwardeeForm(array $form, FormStateInterface $form_state) {
-
-    $form['entities_fieldset']['create_new'] = [
-      '#type' => 'select',
-      '#options' => [
+    $creation_options = [];
+    if(ProjectAccessControlHandler::isProjectManager()){
+      $creation_options = [
         '' => $this->t('Create New'),
+        'management' => $this->t('-----Managment-----'),
+        'create_project' => $this->t('Project'),
+        'assets' => $this->t('-----Assets-----'),
         'create_producer' => $this->t('Producer'),
         'create_lab_testing_method' => $this->t('Methods'),
         'create_soil_health_management_unit' => $this->t('SHMU'),
@@ -139,11 +141,34 @@ class PodsDashboardForm extends PodsFormBase {
         'create_lab_result' => $this->t('Soil Test Result'),
         'create_operation' => $this->t('Operation'),
         'create_irrigation' => $this->t('Irrigation Test'),
+        'assesments' => $this->t('-----Assessments-----'),
         'create_field_assessment' => $this->t('CIFSH Assessment'),
         'create_rangeland_assessment' => $this->t('IIRH Assessment'),
         'create_pasture_assessment' => $this->t('PCS Assessment'),
         'create_pasture_health_assessment' => $this->t('DIPH Assessment'),
-      ],
+      ];
+    }else{
+      $creation_options = [
+        '' => $this->t('Create New'),
+        'assets' => $this->t('-----Assets-----'),
+        'create_producer' => $this->t('Producer'),
+        'create_lab_testing_method' => $this->t('Methods'),
+        'create_soil_health_management_unit' => $this->t('SHMU'),
+        'create_soil_health_sample' => $this->t('Soil Sample'),
+        'create_lab_result' => $this->t('Soil Test Result'),
+        'create_operation' => $this->t('Operation'),
+        'create_irrigation' => $this->t('Irrigation Test'),
+        'assesments' => $this->t('-----Assessments-----'),
+        'create_field_assessment' => $this->t('CIFSH Assessment'),
+        'create_rangeland_assessment' => $this->t('IIRH Assessment'),
+        'create_pasture_assessment' => $this->t('PCS Assessment'),
+        'create_pasture_health_assessment' => $this->t('DIPH Assessment'),
+      ];
+    }
+
+    $form['entities_fieldset']['create_new'] = [
+      '#type' => 'select',
+      '#options' => $creation_options,
       '#attributes' => [
         'onchange' => 'this.form.submit();',
       ],
@@ -194,6 +219,27 @@ class PodsDashboardForm extends PodsFormBase {
       </p> </div>',
    '#suffix' => '</div>',
     ];
+
+    if(ProjectAccessControlHandler::isProjectManager()){
+      $form['form_manager_section'] = [
+        '#markup' => '<div> <h2 id="form-subtitle3">Award and Project Management<span class="small-question" title="This section is for Project Managers to manage the people who are a part of which project."><sup>?</sup></span></div></h2>',
+        '#prefix' => '<div class="bottom-form">',
+      ];
+      
+      $form['awardee_award'] = [
+        '#type' => 'submit',
+        '#value' => $this->t('Award(s): @count', ['@count' => ProjectAccessControlHandler::projectManagerEntityCounts(FALSE)]),
+        '#name' => 'project_manager_award',
+      ];
+      
+      $form['awardee_project'] = [
+        '#type' => 'submit',
+        '#value' => $this->t('Project(s): @count', ['@count' => ProjectAccessControlHandler::projectManagerEntityCounts(TRUE)]),
+        '#name' => 'project_manager_project',
+        '#suffix' => '</div>',
+      ];
+    }
+
     $form['form_subtitle'] = [
       '#markup' => '<div> <h2 id="form-subtitle">Manage Assets<span class="small-question" title="Assets are identifiable persons, field samples, management actions and operations performed within the SHMU."><sup>?</sup></span></div></h2>',
       '#prefix' => '<div class="bottom-form">',
@@ -226,6 +272,7 @@ class PodsDashboardForm extends PodsFormBase {
     if (empty($entityCount['project'])) {
       $this->messenger()->addWarning($this->t('You are not currently assigned to any projects. You must be assigned as a project contact in order to create or edit records.'));
     }
+
 
     $form['awardee_producer'] = [
       '#type' => 'submit',
@@ -335,6 +382,8 @@ class PodsDashboardForm extends PodsFormBase {
       'create_operation' => '/create/operation',
 
       // Awardee asset list paths:
+      'project_manager_project' => '/assets/project_manager/project',
+      'project_manager_award' => '/assets/project_manager/award',
       'producer' => '/assets/producer',
       'soil_health_management_unit' => '/assets/soil_health_management_unit',
       'soil_health_sample' => '/assets/soil_health_sample',

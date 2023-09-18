@@ -6,6 +6,7 @@ use Drupal\asset\Entity\AssetInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\asset\Entity\Asset;
 use Drupal\Core\Render\Element\Checkboxes;
+use Drupal\cig_pods\ProjectAccessControlHandler;
 
 /**
  * Project form.
@@ -37,13 +38,24 @@ class ProjectForm extends PodsFormBase {
    * Get award options.
    */
   public function getAwardOptions() {
-    $awards = $this->entityOptions('asset', 'award');
+    $awards = [];
     $options = [];
-    foreach($awards as $key => $award){
-      $award_entity = \Drupal::entityTypeManager()->getStorage('asset')->load($key);
-      $options[$key] = $award_entity->get('field_award_agreement_number')->value;
-      
+    if(ProjectAccessControlHandler::isProjectManager()){
+      $awards = ProjectAccessControlHandler::getProjectManagerAwardEntities();
+      foreach($awards as $award){
+        $award_entity = \Drupal::entityTypeManager()->getStorage('asset')->load($award);
+        $options[$award] = $award_entity->get('field_award_agreement_number')->value;
+      }
+        
+    }else{
+      $awards = $this->entityOptions('asset', 'award');
+      foreach($awards as $key => $award){
+        $award_entity = \Drupal::entityTypeManager()->getStorage('asset')->load($key);
+        $options[$key] = $award_entity->get('field_award_agreement_number')->value;
+      }
     }
+
+    
 
     return ['' => '- Select -'] + $options;
   }
@@ -205,7 +217,7 @@ class ProjectForm extends PodsFormBase {
 
     ];
 
-    if ($is_edit) {
+    if ($is_edit && ProjectAccessControlHandler::isAdmin()) {
       $form['actions']['delete'] = [
         '#type' => 'submit',
         '#value' => $this->t('Delete'),

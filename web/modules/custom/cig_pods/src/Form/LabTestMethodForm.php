@@ -146,7 +146,7 @@ class LabTestMethodForm extends PodsFormBase {
 
     $lab_default = $is_edit ? $labTestMethod->get('field_lab_soil_test_laboratory')->target_id : NULL;
     $form['field_lab_soil_test_laboratory'] = [
-      '#type' => 'select',
+      '#type' => 'select2',
       '#title' => 'Soil Health Test Laboratory',
       '#options' => $s_he_test_laboratory,
       '#default_value' => $lab_default,
