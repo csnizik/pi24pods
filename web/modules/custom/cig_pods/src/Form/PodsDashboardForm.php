@@ -174,7 +174,24 @@ class PodsDashboardForm extends PodsFormBase {
       '#prefix' => '<div class="middle-form">',
       '#markup' => '<span id="grape" onclick="showInfo2()">
       Lets Get Started
-   </span> <div id="collapse"><p id="form-body">Let\'s get started, you can create and manage Producers, Soil Health Management Units (SHMU), Soil Samples, Lab Test Methods, and Operations using this tool.</p> </div>',
+    </span> <div id="collapse" hidden>
+      <p id="form-body">
+      Welcome to the Producer Operations Data Service. In order to submit your (or your partner organizations) data you will need to do so in a particular order. 
+      <br><br>
+      Start by entering the basic data for your Producer or Producers, the individual or organization responsible for producing the data and agricultural commodities relevant to your grant.
+      <br><br>
+      Once you have created a Producer, you should then identify the "Soil Health Management Units" or SHMUs that they are performing their trial across. 
+      These may, or may not, align with their fields based on the experimental design of your trial.
+      <br><br>
+      Once your SHMU or SHMUs are created, many new entities open up. 
+      You will want to submit details about Soil Samples, Irrigation (Water Testing), Operations (Agricultural Activities on the ground), and the relevant in-field assessments.
+      <br><br>
+      You will also need to create some (Lab Test) Methods that define how your soil samples will be tested. 
+      Once you have a method, you can then start cataloguing soil test results. One method can be applied across many sets of results, 
+      so if you have a consistent set of tests being performed you do not need to create multiple Methods!
+      <br><br>
+      If you have any further questions on the use of PODs or feedback on the sites flow and functionality please contact your program officer for more details. 
+      </p> </div>',
    '#suffix' => '</div>',
     ];
     $form['form_subtitle'] = [
