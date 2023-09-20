@@ -149,6 +149,20 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
       $result = AccessResult::allowed();
     }
 
+    // Project Managers have access to awards and projects they are marked an Awardee Administrative for
+    // as well as all the normal Awardee Entities.
+    elseif (self::isProjectManager()) {
+      if($entity->bundle() === 'project' && in_array($entity->id(), $this->awardeeManagerProjectAccess($eauth_id))){
+        $result = AccessResult::allowed();
+      }
+      elseif($entity->bundle() === 'award' &&  in_array($entity->id(), $this->awardeeManagerAwardAccess($eauth_id))){
+        $result = AccessResult::allowed();
+      }
+      elseif (in_array($entity->id(), $this->eAuthIdAssets($eauth_id, $entity->bundle())) && $entity->bundle() <> 'project') {
+        $result = AccessResult::allowed();
+      }
+    }
+
     // Awardees only have access to assets in a project that their eAuth ID
     // is associated with.
     elseif (self::isAwardee()) {
@@ -181,6 +195,28 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
     // Admins can create any asset.
     if (self::isAdmin()) {
       $result = AccessResult::allowed();
+    }
+
+    // Project Managers can only create certain asset types.
+    elseif (self::isProjectManager()) {
+      $allowed_types = [
+        'producer',
+        'soil_health_management_unit',
+        'soil_health_sample',
+        'field_assessment',
+        'range_assessment',
+        'pasture_assessment',
+        'pasture_health_assessment',
+        'lab_result',
+        'lab_testing_method',
+        'operation',
+        'irrigation',
+        'input',
+        'project',
+      ];
+      if (in_array($entity_bundle, $allowed_types)) {
+        $result = AccessResult::allowed();
+      }
     }
 
     // Awardees can only create certain asset types.

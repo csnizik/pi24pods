@@ -217,7 +217,7 @@ class ProjectForm extends PodsFormBase {
 
     ];
 
-    if ($is_edit && ProjectAccessControlHandler::isAdmin()) {
+    if ($is_edit) {
       $form['actions']['delete'] = [
         '#type' => 'submit',
         '#value' => $this->t('Delete'),
