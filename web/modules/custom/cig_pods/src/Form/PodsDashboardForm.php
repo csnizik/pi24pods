@@ -197,26 +197,46 @@ class PodsDashboardForm extends PodsFormBase {
     ];
     $form['form_body2'] = [
       '#prefix' => '<div class="middle-form">',
-      '#markup' => '<span id="grape" onclick="showInfo2()">
-      Lets Get Started
-    </span> <div id="collapse" hidden>
-      <p id="form-body">
-      Welcome to the Producer Operations Data Service. In order to submit your (or your partner organizations) data you will need to do so in a particular order. 
-      <br><br>
-      Start by entering the basic data for your Producer or Producers, the individual or organization responsible for producing the data and agricultural commodities relevant to your grant.
-      <br><br>
-      Once you have created a Producer, you should then identify the "Soil Health Management Units" or SHMUs that they are performing their trial across. 
-      These may, or may not, align with their fields based on the experimental design of your trial.
-      <br><br>
-      Once your SHMU or SHMUs are created, many new entities open up. 
-      You will want to submit details about Soil Samples, Irrigation (Water Testing), Operations (Agricultural Activities on the ground), and the relevant in-field assessments.
-      <br><br>
-      You will also need to create some (Lab Test) Methods that define how your soil samples will be tested. 
-      Once you have a method, you can then start cataloguing soil test results. One method can be applied across many sets of results, 
-      so if you have a consistent set of tests being performed you do not need to create multiple Methods!
-      <br><br>
-      If you have any further questions on the use of PODs or feedback on the sites flow and functionality please contact your program officer for more details. 
-      </p> </div>',
+      '#markup' => '
+      <div class="container">
+        <div class="row">
+          <h2 id="form-subtitle">Get Started</h2> 
+          <p>Welcome to the Producer Operations Data Service. In order to submit your (or your partner organization\'s) data you will need to do so in a particular order.</p>
+        </div>
+
+        <div id="grape_row" class="row">
+          <span id="grape" onclick="showInfo2()">View Detailed Instructions</span> 
+        </div>
+
+        <div class="row">
+          <div id="text2" hidden>
+            <p id="collapse_text">
+              <h6 class="collapse_header">1. Create "Producer(s)"</h6>
+              Start by entering the basic data for your Producer or Producers, the individual or 
+              organization responsible for producing the data and agricultural commodities relevant to your grant.
+              <br><br>
+
+              <h6 class="collapse_header">2. Create "SHMU(s)"</h6>
+              Once you have created a Producer, you should then identify the "Soil Health Management Units" or SHMUs that they are performing their trial across. 
+              These may, or may not, align with their fields based on the experimental design of your trial.
+              <br><br>
+
+              <h6 class="collapse_header">3. Create "Soil Sample(s)", "Irrigation(s)", "Operation(s)", and Add Relevant Assessments</h6>
+              Once your SHMU or SHMUs are created, many new entities open up. 
+              You will want to submit details about Soil Samples, Irrigation (Water Testing), Operations (Agricultural Activities on the ground), and the relevant in-field assessments.
+              <br><br>
+
+              <h6 class="collapse_header">4. Create "Method(s)" and "Soil Test Result(s)"</h6>
+              You will also need to create some (Lab Test) Methods that define how your soil samples will be tested. 
+              Once you have a method, you can then start cataloguing soil test results. One method can be applied across many sets of results, 
+              so if you have a consistent set of tests being performed you do not need to create multiple Methods!
+              <br><br>
+
+              <i>If you have any further questions on the use of PODS or feedback on the sites flow and functionality please contact your program officer for more details.</i>
+            </p> 
+          </div>
+        </div>
+      </div>',
    '#suffix' => '</div>',
     ];
 
