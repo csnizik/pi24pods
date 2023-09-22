@@ -92,7 +92,7 @@ class ProjectAccessControlHandler extends UncacheableEntityAccessControlHandler 
    */
   public static function isProjectManager() {
     if(self::isAwardee()){
-      if(!empty(self::awardeeManagerProjectAccess(self::getEauthId()))){
+      if(!empty(self::awardeeManagerAwardAccess(self::getEauthId()))){
         return TRUE;
       }
 

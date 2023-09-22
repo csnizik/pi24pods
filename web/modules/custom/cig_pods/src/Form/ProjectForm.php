@@ -335,7 +335,7 @@ class ProjectForm extends PodsFormBase {
       $field_grant_type = $form_state->getValue('field_grant_type');
 
       $project->set('name', $project_name);
-      $project->set('award_default', $award_agreement_number);
+      $project->set('award', $award_agreement_number);
       $project->set('field_resource_concerns', $field_resource_concerns);
       $project->set('field_funding_amount', $field_funding_amount);
       $project->set('field_summary', $summary);
