@@ -321,6 +321,14 @@ class RangeAssessmentForm extends PodsFormBase {
       '#default_value' => $range_assessment_rc_biotic_integrity_justification_value,
     ];
 
+    $asset_id = $is_edit ? $asset->id() : NULL;
+
+    $form['asset_id'] = [
+      '#type' => 'hidden',
+      '#value' => $asset_id,
+      '#attributes' => ['id' => ['asset_id'],],
+    ];
+
     $form['actions']['save'] = [
       '#type' => 'submit',
       '#value' => 'Save',

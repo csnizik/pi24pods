@@ -222,6 +222,14 @@ class SoilHealthSampleForm extends PodsFormBase {
       ],
     ];
 
+    $asset_id = $is_edit ? $asset->id() : NULL;
+
+    $form['asset_id'] = [
+      '#type' => 'hidden',
+      '#value' => $asset_id,
+      '#attributes' => ['id' => ['asset_id'],],
+    ];
+
     // Add submit button.
     $form['actions']['save'] = [
       '#type' => 'submit',

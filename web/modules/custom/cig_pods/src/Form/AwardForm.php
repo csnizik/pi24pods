@@ -317,6 +317,15 @@ class AwardForm extends PodsFormBase {
     '#suffix' => '</div>',
   ];
 
+  $asset_id = $is_edit ? $asset->id() : NULL;
+
+  $form['asset_id'] = [
+    '#type' => 'hidden',
+    '#value' => $asset_id,
+    '#attributes' => ['id' => ['asset_id'],],
+  ];
+
+
   $form_state->setCached(FALSE);
 
     $form['actions']['save'] = [
