@@ -7,7 +7,7 @@ if [ $# -lt 3 ]; then
 fi
 
 if [ $# -eq 4 ] ; then
-  if [ $4 -eq "wipe_db" ] ; then
+  if [ "$4" == "wipe_db" ] ; then
 
     echo "All data will be deleted from the database";
     read -r -p "PODS will be rebuilt. All data will be lost. Are you sure? [Y/n] " input
@@ -25,7 +25,7 @@ if [ $# -eq 4 ] ; then
 
     esac
     #if here $wipe_db option was confirmed
-    $WIPE_DB = "true"
+    WIPE_DB="true"
   else
     echo "Invalid option: $4"
     exit 1
@@ -83,6 +83,7 @@ if [[ "$SUPPORTED_ENVS" == *"$2"* ]]; then
         if [[ "$UPGRADE_SCENARIO" == "false" || $WIPE_DB == "true" ]]; then
             if [ $WIPE_DB == "true" ]; then
               echo "Restoring the backed up settings.php file" 2>&1|tee -a $LOGFILE
+              cp -fp /app/upload/pods."$2".settings.php.bak /app/www/html/"$ENVNAME"/web/sites/default/settings.php 2>&1|tee -a $LOGFILE
             else
               echo "Copying the /app/upload/pods.$2.settings.php file to the settings file..." 2>&1|tee -a $LOGFILE
               cp -fp /app/upload/pods.$2.settings.php /app/www/html/"$ENVNAME"/web/sites/default/settings.php 2>&1|tee -a $LOGFILE
@@ -91,6 +92,8 @@ if [[ "$SUPPORTED_ENVS" == *"$2"* ]]; then
             /app/www/html/"$ENVNAME"/vendor/bin/drush site-install -y --existing-config --account-pass=$3 --site-name="NRCS Producer Operations Data System" farm farm.modules="base" 2>&1 | tee -a $LOGFILE
                 wait
 
+            # Do we really want to disable aggregation for css and js? 
+            # Was this done for a workaround at one time and is no longer needed?
             echo "Running drush config-set for css.preprocess..." 2>&1|tee -a $LOGFILE
             /app/www/html/"$ENVNAME"/vendor/bin/drush  -y config-set  system.performance css.preprocess 0 2>&1|tee -a $LOGFILE
             echo "Running drush config-set for js.preprocess..." 2>&1|tee -a $LOGFILE
@@ -107,6 +110,7 @@ if [[ "$SUPPORTED_ENVS" == *"$2"* ]]; then
             echo "Importing taxonomies..." 2>&1|tee -a $LOGFILE
             /app/www/html/"$ENVNAME"/vendor/bin/drush import:taxonomies -y --choice=full 2>&1|tee -a $LOGFILE
                     wait
+            echo "End of Taxonomy Import" 2>&1|tee -a $LOGFILE
 
         else
             # Recreate alive file link if needed
@@ -132,7 +136,7 @@ if [[ "$SUPPORTED_ENVS" == *"$2"* ]]; then
         /app/www/html/"$ENVNAME"/vendor/bin/drush cr 2>&1|tee -a $LOGFILE
         wait
 
-        echo "Turn off Drupal maintenance mode"
+        echo "Turn off Drupal maintenance mode" 2>&1|tee -a $LOGFILE
         /app/www/html/"$ENVNAME"/vendor/bin/drush sset system.maintenance_mode 0 2>&1|tee -a $LOGFILE
 
         echo "Script completed." 2>&1|tee -a $LOGFILE
