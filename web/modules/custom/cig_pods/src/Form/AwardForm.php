@@ -212,6 +212,7 @@ class AwardForm extends PodsFormBase {
         '#type' => 'textfield',
         '#title' => $this
           ->t("Contact Name"),
+        '#required' => TRUE,
         '#default_value' => $default_name,
         'attributes' => [
           'class' => 'something',
@@ -228,12 +229,14 @@ class AwardForm extends PodsFormBase {
         '#default_value' => $default_type,
         '#prefix' => '<div class="inline-components"',
         '#suffix' => '</div>',
+        '#required' => TRUE,
       ];
 
       $form['names_fieldset'][$i]['contact_eauth_id'] = [
         '#type' => 'textfield',
         '#title' => $this
           ->t("Contact's Eauth ID"),
+        '#required' => TRUE,
         '#default_value' => $default_euath_id,
         'attributes' => [
           'class' => 'something',
@@ -246,6 +249,7 @@ class AwardForm extends PodsFormBase {
         '#type' => 'textfield',
         '#title' => $this
           ->t("Contact's Email"),
+        '#required' => TRUE,
         '#default_value' => $default_email,
         'attributes' => [
           'class' => 'something',
@@ -364,9 +368,7 @@ class AwardForm extends PodsFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    // Minus 1 because there is an entry with key 'actions' for the "Add Another
-    // Minus 1 as above.
-    $num_contacts = count($form['names_fieldset']) - 1;
+    $num_contacts = $form_state->get('num_contact_lines');
 
     $contact_names = [];
     for ($i = 0; $i < $num_contacts; $i++) {
