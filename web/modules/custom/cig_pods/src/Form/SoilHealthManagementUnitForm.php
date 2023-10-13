@@ -779,7 +779,15 @@ class SoilHealthManagementUnitForm extends PodsFormBase {
         '#name' => 'irrigation_radios',
       ],
     ];
-    
+	
+	$asset_id = $is_edit ? $asset->id() : NULL;
+
+	$form['asset_id'] = [
+	  '#type' => 'hidden',
+	  '#value' => $asset_id,
+	  '#attributes' => ['id' => ['asset_id'],],
+	];
+	
     $form['actions']['send'] = [
       '#type' => 'submit',
       '#value' => 'Save',
@@ -902,7 +910,8 @@ class SoilHealthManagementUnitForm extends PodsFormBase {
       'mymap',
       'ssurgo_lookup',
       'ssurgo_data_wrapper',
-      'addCrop'
+      'addCrop',
+      'asset_id'
     ];
 
     $form_values = $form_state->getValues();

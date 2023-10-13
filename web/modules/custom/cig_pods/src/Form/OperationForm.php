@@ -346,6 +346,15 @@ class OperationForm extends PodsFormBase {
       '#value' => 'Add Another Cost',
     ];
 
+
+	$asset_id = $is_edit ? $asset->id() : NULL;
+
+	$form['asset_id'] = [
+	  '#type' => 'hidden',
+	  '#value' => $asset_id,
+	  '#attributes' => ['id' => ['asset_id'],],
+	];
+	
     $form['actions'] = [
       '#type' => 'actions',
     ];
@@ -484,6 +493,7 @@ class OperationForm extends PodsFormBase {
       'cancel',
       'add_input',
       'addCost',
+      'asset_id',
     ];
     $date_fields = ['field_operation_date'];
     $form_values = $form_state->getValues();
