@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cigpods
+id: zoom_us
+label: Zoom US
+description: "Start the map zoomed to the continental United States."
+library: "cigpods/behavior_zoom_us"
+settings: {}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: '666 Implementation Purpose'
+vid: 666_implementation_purpose
+description: ''

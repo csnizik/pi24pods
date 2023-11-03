@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: County
+vid: county
+description: 'List of County Names'
+weight: 0

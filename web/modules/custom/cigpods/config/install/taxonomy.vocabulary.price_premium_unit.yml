@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Price premium unit'
+vid: price_premium_unit
+description: 'The unit associated with the price premium for the commodity sold in the marketing channel.'
+weight: 0

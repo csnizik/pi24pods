@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'New partnership'
+vid: new_partnership
+description: 'A new partnership means that the lead grantee and the partner organization have not had a formal working relationship (under con'
+weight: 0

@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cigpods
+id: csc_field_enrollment
+label: Field Enrollment
+description: Field Enrollment
+workflow: asset_default
+new_revision: true

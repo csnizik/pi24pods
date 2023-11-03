@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Producer outreach'
+vid: producer_outreach
+description: 'Up to three most common types of outreach provided to producer prior to enrollment.'
+weight: 0

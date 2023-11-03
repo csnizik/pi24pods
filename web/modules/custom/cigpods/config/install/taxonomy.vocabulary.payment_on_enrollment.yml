@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Payment on enrollment'
+vid: payment_on_enrollment
+description: 'Any incentive payment provided to the producer upon enrollment/signing a contract, and not related to any implementation, MMRV o'
+weight: 0

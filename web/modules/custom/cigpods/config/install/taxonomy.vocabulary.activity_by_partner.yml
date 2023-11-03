@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Activity by partner'
+vid: activity_by_partner
+description: 'Types of activities that the lead grantee or partner organization has provided during the reporting quarter.'
+weight: 0

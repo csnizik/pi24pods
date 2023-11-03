@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cigpods
+id: csc_nutrient_management
+label: 'Nutrient Management'
+description: 'Nutrient Management'
+name_pattern: 'Nutrient Management log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,363 @@
+cigpods.dashboard:
+  path: '/pods'
+  defaults:
+    _form: '\Drupal\cigpods\Form\PodsDashboardForm'
+    _title: 'Dashboard'
+  requirements:
+    _custom_access: '\Drupal\cigpods\Form\PodsDashboardForm::access'
+
+cigpods.confirm_modal:
+  path: '/modals/confirm-modal'
+  defaults:
+    _controller: '\Drupal\cigpods\Controller\PopupController::openConfirmModal'
+    _title: 'Confirm Modal'
+  requirements:
+    _permission: 'access content'
+
+cigpods.confirm_delete_modal:
+  path: '/modals/confirm-delete-modal/{asset_id}'
+  defaults:
+    _controller: '\Drupal\cigpods\Controller\PopupController::openDeleteConfirmModal'
+    _title: 'Confirm Delete Modal'
+  requirements:
+    _permission: 'access content'
+
+cigpods.project_form:
+  path: "/create/project"
+  defaults:
+    _form: '\Drupal\cigpods\Form\ProjectForm'
+  requirements:
+    _entity_create_access: 'asset:project'
+
+cigpods.awardee_organization_info_form:
+  path: "/create/awardee_org"
+  defaults:
+    _form: '\Drupal\cigpods\Form\AwardeeOrganizationInfoForm'
+  requirements:
+    _entity_create_access: 'asset:awardee'
+
+cigpods.award_form:
+  path: "/create/award"
+  defaults:
+    _form: '\Drupal\cigpods\Form\AwardForm'
+  requirements:
+    _entity_create_access: 'asset:award'
+
+cigpods.producer_form:
+  path: "/create/producer"
+  defaults:
+    _form: '\Drupal\cigpods\Form\ProducerForm'
+  requirements:
+    _entity_create_access: 'asset:producer'
+
+cigpods.operation_form:
+  path: "/create/operation"
+  defaults:
+    _form: '\Drupal\cigpods\Form\OperationForm'
+  requirements:
+    _entity_create_access: 'asset:operation'
+
+cigpods.soil_health_management_unit_form:
+  path: "/create/shmu"
+  defaults:
+    _form: '\Drupal\cigpods\Form\SoilHealthManagementUnitForm'
+  requirements:
+    _entity_create_access: 'asset:soil_health_management_unit'
+
+cigpods.lab_test_method_form:
+  path: "/create/lab_testing_method"
+  defaults:
+    _form: '\Drupal\cigpods\Form\LabTestMethodForm'
+  requirements:
+    _entity_create_access: 'asset:lab_testing_method'
+
+cigpods.lab_results_form:
+  path: "/create/lab_results"
+  defaults:
+    _form: '\Drupal\cigpods\Form\LabResultsForm'
+  requirements:
+    _entity_create_access: 'asset:lab_result'
+
+
+cigpods.irrigation_form:
+  path: "/create/irrigation"
+  defaults:
+    _form: '\Drupal\cigpods\Form\IrrigationForm'
+  requirements:
+    _entity_create_access: 'asset:irrigation'
+
+cigpods.irrigation_shmu_form:
+  path: "/create/irrigation/{shmu}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\IrrigationForm'
+  requirements:
+    _entity_create_access: 'asset:irrigation'
+    _entity_access: shmu.view
+    asset: \d+
+  options:
+    parameters:
+      shmu:
+        type: entity:asset
+
+cigpods.field_assessment_form:
+  path: "/create/field_assessment"
+  defaults:
+    _form: '\Drupal\cigpods\Form\FieldAssessmentForm'
+  requirements:
+    _entity_create_access: 'asset:field_assessment'
+
+cigpods.inputs_form:
+  # {operation} is the operation asset which the new input asset is being added to.
+  path: "/create/inputs/{operation}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\InputsForm'
+  requirements:
+    # We check that inputs assets can be created, and that this particular
+    # operation can be viewed (so the user has access to associate an input
+    # to it.
+    _entity_create_access: 'asset:input'
+    _entity_access: operation.view
+    asset: \d+
+  options:
+    parameters:
+      operation:
+        type: entity:asset
+
+cigpods.edit_field_assessment_form:
+  path: "/edit/field_assessment/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\FieldAssessmentForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.range_assessment_form:
+  path: "/create/range_assessment"
+  defaults:
+    _form: '\Drupal\cigpods\Form\RangeAssessmentForm'
+  requirements:
+    _entity_create_access: 'asset:range_assessment'
+
+cigpods.edit_range_assessment_form:
+  path: "/edit/range_assessment/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\RangeAssessmentForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.pasture_health_assessment_form:
+  path: "/create/pasture_health_assessment"
+  defaults:
+    _form: '\Drupal\cigpods\Form\PastureHealthAssessmentForm'
+  requirements:
+    _entity_create_access: 'asset:pasture_health_assessment'
+
+cigpods.edit_pasture_health_assessment_form:
+  path: "/edit/pasture_health_assessment/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\PastureHealthAssessmentForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.pasture_assessment_form:
+  path: "/create/pasture_assessment"
+  defaults:
+    _form: '\Drupal\cigpods\Form\PastureAssessmentForm'
+  requirements:
+    _entity_create_access: 'asset:pasture_assessment'
+
+cigpods.edit_pasture_assessment_form:
+  path: "/edit/pasture_assessment/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\PastureAssessmentForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_producer_form:
+  path: "/edit/producer/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\ProducerForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_project_form:
+  path: "/edit/project/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\ProjectForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_awardee_form:
+  path: "/edit/awardee/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\AwardeeOrganizationInfoForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_award_form:
+  path: "/edit/award/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\AwardForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_soil_health_management_unit_form:
+  path: "/edit/shmu/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\SoilHealthManagementUnitForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.copy_soil_health_management_unit_form:
+  path: "/copy/shmu/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\ShmuCopyConfirmationForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_lab_test_method_form:
+  path: "/edit/lab_testing_method/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\LabTestMethodForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_lab_results_form:
+  path: "/edit/lab_results/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\LabResultsForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.soil_health_sample_form:
+  path: "/create/soil_health_sample"
+  defaults:
+    _form: '\Drupal\cigpods\Form\SoilHealthSampleForm'
+  requirements:
+    _entity_create_access: 'asset:soil_health_sample'
+
+cigpods.edit_soil_health_sample_form:
+  path: "/edit/soil_health_sample/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\SoilHealthSampleForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_operation_form:
+  path: "/edit/operation/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\OperationForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_field_assesment_form:
+  path: "/edit/field_assesment/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\SoilHealthSampleForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_irrigation_form:
+  path: "/edit/irrigation/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\IrrigationForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.edit_inputs_form:
+  path: "/edit/inputs/{asset}"
+  defaults:
+    _form: '\Drupal\cigpods\Form\InputsForm'
+  requirements:
+    _entity_access: asset.edit
+    asset: \d+
+  options:
+    parameters:
+      asset:
+        type: entity:asset
+
+cigpods.workbook_date_form:
+  path: "/create/workbookdate"
+  defaults:
+    _form: '\Drupal\cigpods\csv_import\src\Form\WorkbookDateForm'
+  requirements:
+    _permission: "access content"

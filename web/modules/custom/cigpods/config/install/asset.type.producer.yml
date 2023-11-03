@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cigpods
+id: producer
+label: Producer
+description: Producer
+workflow: asset_default
+new_revision: false

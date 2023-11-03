@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cigpods
+id: wkt_refresh
+label: WKT Refresh
+description: "Refreshes map with WKT from form input."
+library: "cigpods/behavior_wkt_refresh"
+settings: {}

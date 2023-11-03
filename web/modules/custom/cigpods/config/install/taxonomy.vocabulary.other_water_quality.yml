@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Other water quality'
+vid: other_water_quality
+description: 'Project tracking of other water quality metrics in the enrolled field.'
+weight: 0

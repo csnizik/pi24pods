@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Reduction in nitrogen loss'
+vid: reduction_in_nitrogen_loss
+description: 'Tracking reductions in nitrogen losses in the enrolled field.'
+weight: 0

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Field land use'
+vid: field_land_use
+description: 'Prior to enrollment, what was the most common land use for this field in the past 3 years?'
+weight: 0

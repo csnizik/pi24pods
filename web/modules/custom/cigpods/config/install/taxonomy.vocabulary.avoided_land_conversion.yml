@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Avoided land conversion'
+vid: avoided_land_conversion
+description: 'Tracking of avoided land conversion in the enrolled field.'
+weight: 0

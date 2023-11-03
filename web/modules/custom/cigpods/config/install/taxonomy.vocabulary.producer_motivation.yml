@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Producer motivation'
+vid: producer_motivation
+description: 'Primary operator’s motivation for enrolling in the project'
+weight: 0

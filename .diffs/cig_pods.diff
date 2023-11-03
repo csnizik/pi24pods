@@ -1,13 +1,13 @@
-Only in ./web/modules/custom/cig_pods: cig_pods.info.yml
-Only in ./web/modules/custom/cig_pods: cig_pods.install
-Only in ./web/modules/custom/cig_pods: cig_pods.libraries.yml
-Only in ./web/modules/custom/cig_pods: cig_pods.links.action.yml
-Only in ./web/modules/custom/cig_pods: cig_pods.module
-Only in ./web/modules/custom/cig_pods: cig_pods.post_update.php
-Only in ./web/modules/custom/cig_pods: cig_pods.routing.yml
-Only in ./web/modules/custom/cig_pods: cig_pods.views.inc
-Only in ./web/modules/custom/cig_pods_csc: cig_pods_csc.info.yml
-Only in ./web/modules/custom/cig_pods_csc: cig_pods_csc.routing.yml
+# Only in ./web/modules/custom/cig_pods: cig_pods.info.yml
+# Only in ./web/modules/custom/cig_pods: cig_pods.install
+# Only in ./web/modules/custom/cig_pods: cig_pods.libraries.yml
+# Only in ./web/modules/custom/cig_pods: cig_pods.links.action.yml
+# Only in ./web/modules/custom/cig_pods: cig_pods.module
+# Only in ./web/modules/custom/cig_pods: cig_pods.post_update.php
+# Only in ./web/modules/custom/cig_pods: cig_pods.routing.yml
+# Only in ./web/modules/custom/cig_pods: cig_pods.views.inc
+# Only in ./web/modules/custom/cig_pods_csc: cig_pods_csc.info.yml
+# Only in ./web/modules/custom/cig_pods_csc: cig_pods_csc.routing.yml
 Only in ./web/modules/custom/cig_pods/config/install: asset.type.award.yml
 Only in ./web/modules/custom/cig_pods/config/install: asset.type.awardee.yml
 Only in ./web/modules/custom/cig_pods/config/install: asset.type.contact.yml
@@ -291,13 +291,13 @@ diff --color --color -rus ./web/modules/custom/cig_pods/src/Plugin/Asset/AssetTy
 +++ ./web/modules/custom/cig_pods_csc/src/Plugin/Asset/AssetType/Project.php	2023-11-03 08:50:25
 @@ -1,15 +1,15 @@
  <?php
- 
+
 -namespace Drupal\cig_pods\Plugin\Asset\AssetType;
 +namespace Drupal\cig_pods_csc\Plugin\Asset\AssetType;
- 
+
  use Drupal\farm_entity\Plugin\Asset\AssetType\FarmAssetType;
  use Drupal\farm_field\FarmFieldFactory;
- 
+
  /**
 - * Provides the Project asset type.
 + * Provides the CIG csc_project asset type.
@@ -314,7 +314,7 @@ diff --color --color -rus ./web/modules/custom/cig_pods/src/Plugin/Asset/AssetTy
    public function buildFieldDefinitions() {
 +
      $fields = parent::buildFieldDefinitions();
- 
+
 -    // We do not add a "Name" field because we inherit that from the
 -    // FarmAssetType class.
      $field_info = [
@@ -469,20 +469,20 @@ diff --color --color -rus ./web/modules/custom/cig_pods/src/Plugin/Asset/AssetTy
 +      //     // ],
 +      // ],
      ];
- 
+
      $farmFieldFactory = new FarmFieldFactory();
 -    foreach ($field_info as $name => $info) {
- 
+
 +    foreach ($field_info as $name => $info) {
        $fields[$name] = $farmFieldFactory->bundleFieldDefinition($info)
          ->setDisplayConfigurable('form', TRUE)
          ->setDisplayConfigurable('view', TRUE);
      }
- 
+
      return $fields;
 +
    }
- 
+
  }
 Only in ./web/modules/custom/cig_pods_csc/src/Plugin/Asset/AssetType: ProjectSummary.php
 Only in ./web/modules/custom/cig_pods/src/Plugin/Asset/AssetType: RangeAssessment.php

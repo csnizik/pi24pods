@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cigpods
+name: 'Operation Type'
+vid: d_operation_type
+description: 'A list of Operation Types'
+weight: 0

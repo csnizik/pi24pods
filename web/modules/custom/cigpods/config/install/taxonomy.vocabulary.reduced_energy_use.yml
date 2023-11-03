@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Reduced energy use'
+vid: reduced_energy_use
+description: 'Tracking of reduced energy use in the enrolled field.'
+weight: 0

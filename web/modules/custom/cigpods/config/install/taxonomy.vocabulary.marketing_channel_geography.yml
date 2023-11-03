@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Marketing channel geography'
+vid: marketing_channel_geography
+description: 'The primary geography of the type of marketing channel.'
+weight: 0

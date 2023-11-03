@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'GHG verification method'
+vid: ghg_verification_method
+description: 'Up to the five most common forms of verifying practice implementation used this year as part of MMRV requirements.'
+weight: 0

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'GHG monitoring method'
+vid: ghg_monitoring_method
+description: 'Up to the five most common forms of monitoring GHG benefits used this quarter as part of MMRV requirements.'
+weight: 0

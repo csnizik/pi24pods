@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cigpods
+name: 'Payment on MMRV'
+vid: payment_on_mmrv
+description: 'Any incentive payment provided to the producer upon completing the annual MMRV requirements included in the contract'
+weight: 0
