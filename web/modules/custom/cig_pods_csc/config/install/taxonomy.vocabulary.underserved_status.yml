@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+ enforced:
+    module:
+      - cig_pods_csc
+name: 'Underserved status'
+vid: underserved_status
+description: 'Underserved status of the primary operator of the enrolled operation.'
+weight: 0
