@@ -16,9 +16,11 @@ Note: *\* indicates that this file may be added back if needed*
 
 - This was a file that was only in cig_pods. It changed the config for `system.site.page.front` and did some self-updates.
 
-#### ~~./cigpods.libraries.yml~~*
+#### ./cigpods.libraries.yml~
 
 - cig_pods only
+
+TODO: This should all be moved out of module and into theming layer
 
 #### ~~./cigpods.links.action.yml~~
 
@@ -131,4 +133,78 @@ TODO: Tech discovery on why this is here
 
 TODO: Tech discovery: make sure all of these are still being used. Can they be included in config management instead?
 
+### ./css/, ./js/, ./img/
 
+- SASS and CSS files that should be in a theme instead
+
+TODO: Remove theme components to theming layer
+
+### ./src/Controller/
+
+#### PopupController.php
+
+- cig_pods only
+- Methods for AJAX requests for opening modal confirmation dialogs
+
+TODO:
+
+- Hard-coded form classes need to be refactored
+- Add exception handling (ex. on asset handling, if `$asset_id` is invalid or the asset doesn't exist.)
+- Replace direct calls to `\Drupal` services (ex. `\Drupal::entityTypeManager()`) with dependency injection
+- Look at [api.drupal.org](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Ajax%21OpenModalDialogCommand.php/class/OpenModalDialogCommand/10) for docs on `OpenModalDialogCommand`; specifically, why are we not using the `$title` `$options` and `$content` properties?
+
+### ./src/Form/
+
+- cig_pods only
+- Multiple forms
+
+TODO: Code review of form classes
+
+### ./src/Plugin/Asset/AssetType/
+
+- In both cig_pods and cig_pods_csc
+
+#### cig_pods asset types
+
+- Award.php
+- Awardee.php
+- Contact.php
+- CostSequence.php
+- FieldAssessment.php
+- Input.php
+- Irrigation.php
+- LabResult.php
+- LabTestingMethod.php
+- LabTestingProfile.php
+- Operation.php
+- PastureAssessment.php
+- PastureHealthAssessment.php
+- Producer.php
+- RangeAssessment.php
+- SHMUCropRotation.php
+- SoilHealthManagementUnit.php
+- SoilHealthSample.php
+
+#### cig_pods_csc asset types
+
+- FieldEnrollment.php
+- ImportHistory.php
+- ProducerEnrollment.php
+- PartnerActivities.php
+- ProjectSummary.php
+
+#### Conflicting asset types
+
+- Project.php
+
+Separating into two asset types:
+
+- SHProject.php
+- CSCProject.php
+
+TODO: Tech discovery on refactoring these into one entity type with a field for 'SH' or 'CSC'
+
+
+### ./src/Plugin/Log/Log/LogType
+
+- cig_pods_csc only

@@ -1,0 +1,184 @@
+dashboard:
+  css:
+    theme:
+      css/dashboard.scss: {}
+
+project_entry_form:
+  css:
+    theme:
+      css/project.scss: {}
+  js:
+    js/project.js: {}
+producer_entry_form:
+  css:
+    theme:
+      css/producer.scss: {}
+      css/project.js: {}
+
+confirm_modal:
+  version: 1.x
+  js:
+    js/confirm-modal.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog.ajax
+
+awardee_methods_details_display:
+  css:
+    theme:
+      css/awardee-methods-details-display.scss: {}
+
+admin_details_display:
+  css:
+    theme:
+      css/admin-details-display.css: {}
+
+lab_test_profiles_admin_form:
+  css:
+    theme:
+      css/lab_test_profiles_admin.scss: {}
+
+soil_health_sample_form:
+  css:
+    theme:
+      css/soil-health-sample.scss: {}
+
+soil_health_management_unit_form:
+  css:
+    theme:
+      css/shmu.scss: {}
+
+irrigation_form:
+  css:
+    theme:
+      css/irrigation.scss: {}
+
+irrigation_display:
+  css:
+    theme:
+      css/irrigation_display.scss: {}
+
+operation_form:
+  css:
+    theme:
+      css/operation.scss: {}
+
+operation_display:
+  css:
+    theme:
+      css/awardee-operation-display.scss: {}
+
+lab_test_method_admin_form:
+  js:
+    js/methods.js: {}
+  css:
+    theme:
+      css/lab_test_method_admin.scss: {}
+
+lab_results_form:
+  css:
+    theme:
+      css/lab_results.scss: {}
+awardee_organization_form:
+  css:
+    theme:
+      css/awardee-organization.scss: {}
+producer_form:
+  css:
+    theme:
+      css/producer.scss: {}
+awardee_lab_results_display:
+  css:
+    theme:
+      css/awardee-lab-results-display.scss: {}
+awardee_soil_sample_display:
+  css:
+    theme:
+      css/awardee-soil-sample-display.scss: {}
+admin_project_display:
+  css:
+    theme:
+      css/admin-project-display.scss: {}
+css_form:
+  css:
+    theme:
+      css/form.scss: {}
+field_assessment:
+  css:
+    theme:
+      css/field-assesment-display.scss: {}
+      # @todo CSS cleanup
+      # Both of these were being applied to field assessment Views originally
+      # so copied this one here when the Views were merged.
+      css/awardee-soil-sample-display.scss: {}
+
+field_assessment_form:
+  css:
+    theme:
+      css/awardee-field-assessment.scss: {}
+
+range_assessment_form:
+  css:
+    theme:
+      css/awardee-range-assessment.scss: {}
+
+pasture_health_assessment_form:
+  css:
+    theme:
+      css/awardee-pasture-health-assessment.scss: {}
+
+pasture_health_display:
+  css:
+    theme:
+      css/awardee-pasture-health-display.scss: {}
+
+range_assessment_display:
+  css:
+    theme:
+      css/awardee-rangeland-details-display.scss: {}
+
+hide_return:
+  css:
+    theme:
+      css/hide_return.scss: {}
+
+pasture_assessment_form:
+  css:
+    theme:
+      css/pasture-assessment.scss: {}
+
+behavior_wkt_refresh:
+  js:
+    js/farmOS.map.behaviors.wkt_refresh.js: {}
+  dependencies:
+    - farm_map/farm_map
+
+behavior_wkt_refresh_soil_sample:
+  js:
+    js/farmOS.map.behaviors.wkt_refresh_soil_sample.js: {}
+  dependencies:
+    - farm_map/farm_map
+
+behavior_zoom_us:
+  js:
+    js/farmOS.map.behaviors.zoom_us.js: {}
+  dependencies:
+    - farm_map/farm_map
+
+behavior_latlon_add:
+  js:
+    js/farmOS.map.behaviors.latlon_add.js: {}
+  dependencies:
+    - farm_map/farm_map
+
+behavior_latlon_refresh:
+  js:
+    js/farmOS.map.behaviors.latlon_refresh.js: {}
+  dependencies:
+    - farm_map/farm_map
+
+inputs_form:
+  css:
+    theme:
+      css/inputs.scss: {}
