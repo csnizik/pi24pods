@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\cig_pods_csc\Plugin\Log\LogType;
+namespace Drupal\cigpods\Plugin\Log\LogType;
 
 use Drupal\farm_entity\Plugin\Log\LogType\FarmLogType;
 use Drupal\farm_field\FarmFieldFactory;
@@ -504,7 +504,7 @@ class EnvironmentalBenefits extends FarmLogType {
           'Yes' => t(string: 'Yes'),
           'No' => t(string: 'No'),
           "I don't know" => t(string: "I don't Know"),
-        ],        
+        ],
         'required' => TRUE,
         'multiple' => FALSE,
       ],

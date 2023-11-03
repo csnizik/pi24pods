@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\cig_pods_csc\Plugin\Log\LogType;
+namespace Drupal\cigpods\Plugin\Log\LogType;
 
 use Drupal\farm_entity\Plugin\Log\LogType\FarmLogType;
 use Drupal\farm_field\FarmFieldFactory;
@@ -60,7 +60,7 @@ class FieldSummary extends FarmLogType {
         'label' => 'Field Summary Commodity Type',
         'description' => 'Field Summary Commodity Type',
 		    'target_type' => 'taxonomy_term',
-		    'target_bundle' => 'commodity_term', 
+		    'target_bundle' => 'commodity_term',
         'required' => TRUE,
         'multiple' => FALSE,
       ],

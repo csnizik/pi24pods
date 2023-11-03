@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\cig_pods_csc\Plugin\Log\LogType;
+namespace Drupal\cigpods\Plugin\Log\LogType;
 
 use Drupal\farm_entity\Plugin\Log\LogType\FarmLogType;
 use Drupal\farm_field\FarmFieldFactory;
@@ -50,7 +50,7 @@ class ForestStandImprovement extends FarmLogType {
         'required' => FALSE,
         'multiple' => FALSE,
       ],
- 
+
     ];
 
     $farmFieldFactory = new FarmFieldFactory();
