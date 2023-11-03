@@ -15,55 +15,55 @@ services:
   www:
     build: .
     entrypoint: /bin/bash
-    command:
-      - -c
-      - |
-        set -ex
+    # command:
+      # - -c
+      # - |
+      #   set -ex
 
-        # If a INSTALLED file does not exist, perform a fresh install
-        if [ ! -f /opt/drupal/INSTALLED ]; then
+      #   # If a INSTALLED file does not exist, perform a fresh install
+      #   if [ ! -f /opt/drupal/INSTALLED ]; then
 
-          # Wait for MySQL
-          while ! mysqladmin ping -h db --silent; do
-            sleep 1
-          done
+      #     # Wait for MySQL
+      #     while ! mysqladmin ping -h db --silent; do
+      #       sleep 1
+      #     done
 
-          # Delete the database volume.
-          mysql -u pods -h db -ppods -e "DROP DATABASE pods; CREATE DATABASE pods"
+      #     # Delete the database volume.
+      #     mysql -u pods -h db -ppods -e "DROP DATABASE pods; CREATE DATABASE pods"
 
-          # Delete all files created by Composer.
-          # This also deletes our custom modules and then restores them via Git.
-          rm -rf /opt/drupal/.editorconfig /opt/drupal/.gitattributes /opt/drupal/keys /opt/drupal/vendor /opt/drupal/web
-          (cd /opt/drupal/ && git checkout -- web)
+      #     # Delete all files created by Composer.
+      #     # This also deletes our custom modules and then restores them via Git.
+      #     rm -rf /opt/drupal/.editorconfig /opt/drupal/.gitattributes /opt/drupal/keys /opt/drupal/vendor /opt/drupal/web
+      #     (cd /opt/drupal/ && git checkout -- web)
 
-          git config --global http.sslverify false
+      #     git config --global http.sslverify false
 
-          # Build the PODS codebase via Composer.
-          composer install
+      #     # Build the PODS codebase via Composer.
+      #     composer install
 
-          rm auth.json
+      #     rm auth.json
 
-          # Install Drupal via Drush.
-          drush site-install -y --existing-config --db-url=mysql://pods:pods@db/pods --account-pass=admin farm farm.modules="base"
+      #     # Install Drupal via Drush.
+      #     drush site-install -y --existing-config --db-url=mysql://pods:pods@db/pods --account-pass=admin farm farm.modules="base"
 
-          # Make sites/default/files writable by Apache.
-          chown -R root:www-data /opt/drupal/web/sites/default/files
+      #     # Make sites/default/files writable by Apache.
+      #     chown -R root:www-data /opt/drupal/web/sites/default/files
 
-          # Import taxonomy terms via Drush.
-          drush -y import:taxonomies --choice=full
-          
-          # Add a test user.
-          drush user:create test --mail="test@example.com" --password="test"
+      #     # Import taxonomy terms via Drush.
+      #     drush -y import:taxonomies --choice=full
 
-          # Create INSTALLED file
-          touch /opt/drupal/INSTALLED
-        fi
+      #     # Add a test user.
+      #     drush user:create test --mail="test@example.com" --password="test"
 
-        # Notify that PODS is ready.
-        echo "##### PODS IS READY #####"
+      #     # Create INSTALLED file
+      #     touch /opt/drupal/INSTALLED
+      #   fi
 
-        # Run Apache.
-        apache2-foreground
+      #   # Notify that PODS is ready.
+      #   echo "##### PODS IS READY #####"
+
+      #   # Run Apache.
+      #   apache2-foreground
 
     depends_on:
       - db
@@ -71,7 +71,4 @@ services:
       - './:/opt/drupal'
     ports:
       - '85:80'
-    environment:
-      XDEBUG_MODE: debug
-      XDEBUG_CONFIG: discover_client_host=yes
-      XDEBUG_SESSION: PHPSTORM
+
