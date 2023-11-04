@@ -1,10 +1,48 @@
-# CIGPODS module
+<style>
+  lime { color: lime; font-weight: bold }
+  pink { color: fuchsia; font-weight: bold }
+</style>
 
-**Combining modules `cig_pods` and `cig_pods_csc`**
+# CIGPODS Module
+
+Combining modules `cig_pods` and `cig_pods_csc`
+
+- [CIGPODS Module](#cigpods-module)
+  - [File structure](#file-structure)
+    - [Root directory](#root-directory)
+      - [./cigpods.info.yml](#cigpodsinfoyml)
+      - [~~./cigpods.install~~](#cigpodsinstall)
+      - [./cigpods.libraries.yml~](#cigpodslibrariesyml)
+      - [~~./cigpods.links.action.yml~~](#cigpodslinksactionyml)
+      - [~~./cigpods.module~~](#cigpodsmodule)
+      - [~~./cigpods.post\_update.php~~](#cigpodspost_updatephp)
+      - [./cigpods.routing.yml](#cigpodsroutingyml)
+      - [./cigpods.views.inc](#cigpodsviewsinc)
+    - [./config/install/](#configinstall)
+    - [./css/, ./js/, ./img/](#css-js-img)
+    - [./src/Controller/PopupController.php](#srccontrollerpopupcontrollerphp)
+    - [./src/Form/](#srcform)
+    - [./src/Plugin/Asset/AssetType/](#srcpluginassetassettype)
+      - [cig\_pods asset types](#cig_pods-asset-types)
+      - [cig\_pods\_csc asset types](#cig_pods_csc-asset-types)
+      - [Conflicting asset types](#conflicting-asset-types)
+    - [./src/Plugin/Log/{LogType}.php](#srcpluginloglogtypephp)
+    - [./src/Plugin/views/argument/](#srcpluginviewsargument)
+    - [./src/ProjectAccessControlHandler.php](#srcprojectaccesscontrolhandlerphp)
+    - [./templates/html.html.twig](#templateshtmlhtmltwig)
+  - [Issues](#issues)
+    - [Custom Access Control](#custom-access-control)
+      - [Attaching roles to the session](#attaching-roles-to-the-session)
+      - [Security risks](#security-risks)
+      - [Compatibility problems](#compatibility-problems)
+    - [Removal of Drupal's Theming System](#removal-of-drupals-theming-system)
+      - [Separation of concerns](#separation-of-concerns)
+      - [Asset management](#asset-management)
+      - [Caching](#caching)
 
 ## File structure
 
-### Root dir
+### Root directory
 
 Note: *\* indicates that this file may be added back if needed*
 
@@ -14,17 +52,17 @@ Note: *\* indicates that this file may be added back if needed*
 
 #### ~~./cigpods.install~~
 
-- This was a file that was only in cig_pods. It changed the config for `system.site.page.front` and did some self-updates.
+- <lime>cig_pods only</lime>
+- Changes the config for `system.site.page.front` and does some self-updates.
 
 #### ./cigpods.libraries.yml~
 
-- cig_pods only
-
-TODO: This should all be moved out of module and into theming layer
+- <lime>cig_pods only</lime>
+- See [Removal of Drupal's Theming System](#removal-of-drupals-theming-system)
 
 #### ~~./cigpods.links.action.yml~~
 
-- cig_pods only
+- <lime>cig_pods only</lime>
 - This file works with Drupal's routing system; defines local actions, which are links/routes. Each link leads to an administrative page.
 - Links defined:
   - Add Awardee
@@ -43,17 +81,19 @@ TODO: This should all be moved out of module and into theming layer
 
 #### ~~./cigpods.module~~
 
-- cig_pods only
+- <lime>cig_pods only</lime>
 - Implements hooks:
   - hook_entity_type_alter()
     - Alters entity type definitions
     - Sets custom access handler for `asset` entity type
+    - See [Custom Access Control](#custom-access-control)
   - hook_theme_registry_alter()
     - If theme is `gin`, changes path where template files are located for the `html` theme hook
     - Allows module to provide template files to override theme template files
+    - See [Removal of Drupal's Theming System](#removal-of-drupals-theming-system)
   - hook_page_attachment()
     - Adds 2 CSS libraries, `hide_return` and `confirm_modal` to all pages
-    - **These libraries should not be defined here, they should be defined in the module's `.libraries.yml` file.**
+    - See [Removal of Drupal's Theming System](#removal-of-drupals-theming-system)
   - hook_views_pre_render()
     - Targets the view `pods_asset_lists` and attaches different CSS libraries based on the current display of the view.
     - **These libraries should not be defined here, they should be defined in the module's `.libraries.yml` file.**
@@ -102,14 +142,14 @@ TODO: This should all be moved out of module and into theming layer
 
 #### ./cigpods.routing.yml
 
-**cig_pods**:
+<lime>cig_pods:</lime>
 
 - Defines routes to controllers and forms
 - Fixed empty `_title` properties
 - Added leading `/` to paths
 - Fixed typos
 
-**cig_pods_csc**:
+<teal>cig_pods_csc:</teal>
 
 - Defines single route for `/create/workbookdate`
 
@@ -120,7 +160,7 @@ TODO:
 
 #### ./cigpods.views.inc
 
-- cig_pods only
+- <lime>cig_pods only</lime>
 - Implements hook_views_data() to register a new argument handler
 - Used for contextual filtering?
 
@@ -135,15 +175,11 @@ TODO: Tech discovery: make sure all of these are still being used. Can they be i
 
 ### ./css/, ./js/, ./img/
 
-- SASS and CSS files that should be in a theme instead
+- See [Removal of Drupal's Theming System](#removal-of-drupals-theming-system)
 
-TODO: Remove theme components to theming layer
+### ./src/Controller/PopupController.php
 
-### ./src/Controller/
-
-#### PopupController.php
-
-- cig_pods only
+- <lime>cig_pods only</lime>
 - Methods for AJAX requests for opening modal confirmation dialogs
 
 TODO:
@@ -155,16 +191,16 @@ TODO:
 
 ### ./src/Form/
 
-- cig_pods only
+- <lime>cig_pods only</lime>
 - Multiple forms
 
 TODO: Code review of form classes
 
 ### ./src/Plugin/Asset/AssetType/
 
-- In both cig_pods and cig_pods_csc
+- In both <lime>cig_pods</lime> and <pink>cig_pods_csc</pink>
 
-#### cig_pods asset types
+#### <lime>cig_pods</lime> asset types
 
 - Award.php
 - Awardee.php
@@ -185,7 +221,7 @@ TODO: Code review of form classes
 - SoilHealthManagementUnit.php
 - SoilHealthSample.php
 
-#### cig_pods_csc asset types
+#### <pink>cig_pods_csc</pink> asset types
 
 - FieldEnrollment.php
 - ImportHistory.php
@@ -204,7 +240,64 @@ Separating into two asset types:
 
 TODO: Tech discovery on refactoring these into one entity type with a field for 'SH' or 'CSC'
 
+### ./src/Plugin/Log/{LogType}.php
 
-### ./src/Plugin/Log/Log/LogType
+- <pink>cig_pods_csc only</pink>
+- Log types
+- TODO: code review
 
-- cig_pods_csc only
+### ./src/Plugin/views/argument/
+
+- <lime>cig_pods only</lime>
+- See [Custom Access Control](#custom-access-control)
+
+### ./src/ProjectAccessControlHandler.php
+
+- <lime>cig_pods only</lime>
+- See [Custom Access Control](#custom-access-control)
+- Defines custom access control handler for entities
+- Includes methods to integrate with the Views module to alter queries
+
+### ./templates/html.html.twig
+
+- See [Removal of Drupal's Theming System](#removal-of-drupals-theming-system)
+
+## Issues
+
+### Custom Access Control
+
+`ProjectAccessControlHandler.php` defines custom access control handling. It extends `Drupal\entity\UncacheableEntityAccessControlHandler` and it appears to override access checks for creating and interacting with entities.
+
+This approach is significantly outside of Drupal's already robust user and role management system.
+
+#### Attaching roles to the session
+
+We are defining two roles, `isAdmin()` and `isAwardee()` and attaching them to the session. This is bypassing Drupal's well-tested, secure and comprehensive user/permissions systems. Drupal assign roles to *user accounts*, not *sessions*. A session-based approach is outside of Drupal's long-established, supported, and tested functionality.
+
+#### Security risks
+
+Using Drupal's built-in user-based approach gives the assurance of Drupal's data security. Creating an alternate session-based approach does not. Our Drupal sites will be handling secure data. Using sessions means we are risking exposure, and we alone are responsible for making sure it remains secure.
+
+#### Compatibility problems
+
+Other modules (those in Drupal core as well as contributed modules) rely on Drupal's user-based role and permission systems. Replacing it with custom code requires us to create and maintain workarounds so that our code integrates with Drupal.
+
+**TL;DR** Session-based role assignment makes our site more brittle, less secure, and less sustainable.
+
+### Removal of Drupal's Theming System
+
+The PODS-SH and PODS-CSC sites both follow the non-standard approach to theming that the FarmOS distribution uses. In Drupal, themes are the correct place to handle the presentation layer, which includes CSS, JavaScript, and Twig template files.
+
+#### Separation of concerns
+
+Themes maintain the fundamental principle of separation of concerns. While Drupal's modules do allow for some elements of themes to be included in certain circumstances (i.e. a module that adds charts, graphs, diagrams, etc. would include the CSS, JS, and Twig markup for the page elements that it has added), modules are not the intended place for a site's primary theme; they are to be used for functionality, not presentation.
+
+#### Asset management
+
+Themes add their CSS and JS to pages using the render array, which ensures that files are loaded in the right order for performance and caching. Libraries in themes manage and aggregate these assets to ensure that they are loaded not only in the correct order, but only when needed.
+
+Bypassing this system by brute-force adding assets to pages will cause performance issues and can create styling issues that are very difficult to triage.
+
+#### Caching
+
+Drupal's caching system is built around the standard theming workflow. Bypassing the theming layer can create suboptimal caching which affects site performance.
