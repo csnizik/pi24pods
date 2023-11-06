@@ -1,8 +1,3 @@
-<style>
-  lime { color: lime; font-weight: bold }
-  pink { color: fuchsia; font-weight: bold }
-</style>
-
 # CIGPODS Module
 
 Combining modules `cig_pods` and `cig_pods_csc`
@@ -149,7 +144,7 @@ Note: *\* indicates that this file may be added back if needed*
 - Added leading `/` to paths
 - Fixed typos
 
-<teal>cig_pods_csc:</teal>
+<hotpink>cig_pods_csc:</hotpink>
 
 - Defines single route for `/create/workbookdate`
 
@@ -301,3 +296,8 @@ Bypassing this system by brute-force adding assets to pages will cause performan
 #### Caching
 
 Drupal's caching system is built around the standard theming workflow. Bypassing the theming layer can create suboptimal caching which affects site performance.
+
+<style>
+  lime { color: lime; }
+  hotpink { color: hotpink; }
+</style>
