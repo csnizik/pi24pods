@@ -83,11 +83,11 @@ class CsvImportController extends ControllerBase {
     ];
 
 
-    //temporarily save imported file
-    $folderPath = realpath($_FILES['file']['tmp_name']);
-    $targetPath = $folderPath . $_FILES['file']['name'];
+    ////temporarily save imported file
+    //$folderPath = realpath($_FILES['file']['tmp_name']);
+    //$targetPath = $folderPath . $_FILES['file']['name'];
 
-    move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
+   // move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
 
     //get file extension
     $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
@@ -97,7 +97,7 @@ class CsvImportController extends ControllerBase {
     $reader = IOFactory::createReader($extension);
     $reader->setReadDataOnly(TRUE);
     $reader->setLoadSheetsOnly($sheetnames);
-    $spreadSheet = $reader->load($targetPath);
+    //$spreadSheet = $reader->load($targetPath);
     $sheetCount = $spreadSheet->getSheetCount();
     
 
