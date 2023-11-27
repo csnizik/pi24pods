@@ -90,15 +90,15 @@ class CsvImportController extends ControllerBase {
    // move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
 
     //get file extension
-    $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
+    // $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
     
-    //read the workbook but only get the sheets that is relevent
-    $sheetnames = ['Awardee Organizations', 'Projects'];
-    $reader = IOFactory::createReader($extension);
-    $reader->setReadDataOnly(TRUE);
-    $reader->setLoadSheetsOnly($sheetnames);
-    //$spreadSheet = $reader->load($targetPath);
-    $sheetCount = $spreadSheet->getSheetCount();
+    // //read the workbook but only get the sheets that is relevent
+    // $sheetnames = ['Awardee Organizations', 'Projects'];
+    // $reader = IOFactory::createReader($extension);
+    // $reader->setReadDataOnly(TRUE);
+    // $reader->setLoadSheetsOnly($sheetnames);
+    // //$spreadSheet = $reader->load($targetPath);
+    // $sheetCount = $spreadSheet->getSheetCount();
     
 
     // Process each sheet in the workbook.
@@ -210,21 +210,21 @@ class CsvImportController extends ControllerBase {
      // if (in_array($_FILES["file"]["type"], $allowedFileType)) {
 
           //temporarily save imported file
-          $folderPath = realpath($_FILES['file']['tmp_name']);
-          $targetPath = $folderPath . $_FILES['file']['name'];
+          // $folderPath = realpath($_FILES['file']['tmp_name']);
+          // $targetPath = $folderPath . $_FILES['file']['name'];
 
-          move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
+          // move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
 
-          //get file extension
-          $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
+          // //get file extension
+          // $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
           
-          //read the workbook but only get the sheets that is relevent
-          $sheetnames = ['Awardee Organizations', 'Projects'];
-          $reader = IOFactory::createReader($extension);
-          $reader->setReadDataOnly(TRUE);
-          $reader->setLoadSheetsOnly($sheetnames);
-          $spreadSheet = $reader->load($targetPath);
-          $sheetCount = $spreadSheet->getSheetCount();
+          // //read the workbook but only get the sheets that is relevent
+          // $sheetnames = ['Awardee Organizations', 'Projects'];
+          // $reader = IOFactory::createReader($extension);
+          // $reader->setReadDataOnly(TRUE);
+          // $reader->setLoadSheetsOnly($sheetnames);
+          // $spreadSheet = $reader->load($targetPath);
+          // $sheetCount = $spreadSheet->getSheetCount();
           
 
           // Process each sheet in the workbook.
@@ -284,20 +284,20 @@ class CsvImportController extends ControllerBase {
       if (in_array($_FILES["file"]["type"], $allowedFileType)) {
 
           //temporarily save imported file
-          $folderPath = realpath($_FILES['file']['tmp_name']);
-          $targetPath = $folderPath . $_FILES['file']['name'];
-          move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
+          // $folderPath = realpath($_FILES['file']['tmp_name']);
+          // $targetPath = $folderPath . $_FILES['file']['name'];
+          // move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
 
           //get file extension
-          $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
+          // $extension = ucfirst(strtolower(pathinfo($targetPath, PATHINFO_EXTENSION)));
           
           //read the workbook but only get the sheets that is relevent
           $sheetnames = ['Producer', 'Methods'];
-          $reader = IOFactory::createReader($extension);
-          $reader->setReadDataOnly(TRUE);
-          $reader->setLoadSheetsOnly($sheetnames);
-          $spreadSheet = $reader->load($targetPath);
-          $sheetCount = $spreadSheet->getSheetCount();
+          // $reader = IOFactory::createReader($extension);
+          // $reader->setReadDataOnly(TRUE);
+          // $reader->setLoadSheetsOnly($sheetnames);
+          // $spreadSheet = $reader->load($targetPath);
+          // $sheetCount = $spreadSheet->getSheetCount();
           
 
           // Process each sheet in the workbook.
@@ -343,7 +343,7 @@ class CsvImportController extends ControllerBase {
           }
 
           //Purge the uploaded file after import is completed.
-          unlink($targetPath);
+          //unlink($targetPath);
           
       } else {    
           $output = "Invalid File Type. Upload Excel File.";
