@@ -75,7 +75,8 @@ if [[ "$SUPPORTED_ENVS" == *"$2"* ]]; then
         fi
 
         cd /app/www/html/"$ENVNAME"
-
+        echo "Deleting previously deployed files" 2>&1|tee -a $LOGFILE
+        rm -rf *
         echo "Extracting the PODS tarball file: /app/upload/pods_$1.tar.gz" 2>&1|tee -a $LOGFILE
         tar -xzf /app/upload/pods_$1.tar.gz 2>&1|tee -a $LOGFILE
                 wait
