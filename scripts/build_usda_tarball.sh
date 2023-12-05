@@ -11,9 +11,9 @@ fi
 SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 PARENTPATH="$(dirname $SCRIPTPATH)"
 
-if [[ -f pods.tar.gz ]]; then
+if [[ -f $PARENTPATH/pods.tar.gz ]]; then
     echo "Deleting last tar file"
-    rm pods.tar.gz
+    rm $PARENTPATH/pods.tar.gz
 fi
 
 cd .. # now just pods source
@@ -56,7 +56,7 @@ wait
 echo "copy vendor folder"
 cp -rv $PARENTPATH/vendor/ pods
 echo "Packaging tarball..."
-tar -czf $PARENTPATH/scripts/pods.tar.gz .
+tar -czf $PARENTPATH/pods.tar.gz .
 
 echo "Done!"
 
