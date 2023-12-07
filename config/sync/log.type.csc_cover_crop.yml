@@ -1,0 +1,15 @@
+uuid: e6bab1e5-3e73-4d99-b1cb-c74771b19d12
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: pT5BzYKqpVyamm22sIN3yILbJDow4OurIiMf_0I7AD0
+id: csc_cover_crop
+label: 'Cover Crop'
+description: 'Cover Crop'
+name_pattern: 'Cover Crop log [log:id]'
+workflow: log_default
+new_revision: true

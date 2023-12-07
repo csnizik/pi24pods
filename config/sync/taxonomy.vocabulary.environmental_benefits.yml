@@ -1,0 +1,13 @@
+uuid: 5db2c096-7807-4197-a30b-f2f91655ca24
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: Pk5VjespRmKjym9hFEuf5-eKDuxjCWlKYCI9G3nX9P8
+name: 'Environmental benefits'
+vid: environmental_benefits
+description: 'Tracking of environmental benefits other than greenhouse gas emission reductions and carbon sequestration in the enrolled field.'
+weight: 0

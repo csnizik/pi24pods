@@ -1,0 +1,13 @@
+uuid: 0abd741e-d36a-4b7f-be7a-1c9224128b10
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: y3W5rGfKEFO4fdz4Yj9g1IeH0nm6LkvgFnKPJhJbTc0
+name: 'Other field measurement'
+vid: other_field_measurement
+description: 'Direct physical measurements or data collection taken in the field for any reason other than GHG benefits estimation.'
+weight: 0

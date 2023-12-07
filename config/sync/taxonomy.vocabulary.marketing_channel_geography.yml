@@ -1,0 +1,13 @@
+uuid: e6f51108-9759-4de7-bf2a-cac54ccb145e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 6XgZHxRw7Xt3507dgnsnFqudMUbyuod2foE6K4xUiWM
+name: 'Marketing channel geography'
+vid: marketing_channel_geography
+description: 'The primary geography of the type of marketing channel.'
+weight: 0

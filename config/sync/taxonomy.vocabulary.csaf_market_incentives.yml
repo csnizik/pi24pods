@@ -1,0 +1,13 @@
+uuid: 17584f12-52ff-448d-b395-21aae0044116
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 0E18HJXv1rW2rqDe1JSEhb18cwRzR3-kMnaBgHQLSyQ
+name: 'CSAF market incentives'
+vid: csaf_market_incentives
+description: 'If this farm (under the primary operator) has implemented CSAF practices in the last ten years, was implementation supported by '
+weight: 0

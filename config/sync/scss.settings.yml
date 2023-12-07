@@ -1,0 +1,9 @@
+active: 0
+theme_to_watch: claro
+scss_directory: ''
+css_directory: ''
+additional_import_paths: ''
+additional_paths_to_watch: ''
+output_formatting: \ScssPhp\ScssPhp\Formatter\Expanded
+line_numbers: 0
+source_maps: 0

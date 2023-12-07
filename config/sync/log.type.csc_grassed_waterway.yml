@@ -1,0 +1,15 @@
+uuid: dec5b245-0068-4a0b-8ca2-57d1aa0b82a5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: YCaZ_oNIeopI3axGdD9U0gle4arhZiF9efTXoGHXEGE
+id: csc_grassed_waterway
+label: 'Grassed Waterway'
+description: 'Grassed Waterway'
+name_pattern: 'Grassed Waterway [log:id]'
+workflow: log_default
+new_revision: true

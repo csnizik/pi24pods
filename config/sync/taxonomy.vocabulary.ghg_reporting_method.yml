@@ -1,0 +1,13 @@
+uuid: 74c2e18e-ebd2-4724-ade8-632be0d6c5fc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: '-MA0ZBfUqxw4JcxvIrXxc5yIveUIcCVkhYjnmXc0wPw'
+name: 'GHG reporting method'
+vid: ghg_reporting_method
+description: 'Up to the five most common forms of tracking and reporting on practice implementation used this year as part of MMRV requirement'
+weight: 0

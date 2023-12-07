@@ -1,0 +1,13 @@
+uuid: 30a6d7c8-0c16-42ed-940f-60cae9b85b95
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: gZape350L3gpGyM1w3HpnjYRSDmwd-DK9U9Kc1MDo7E
+name: 'Reduction in nitrogen loss purpose'
+vid: reduction_in_nitrogen_loss_purpo
+description: 'Purpose of tracking reduction in nitrogen losses in the enrolled field.'
+weight: 0

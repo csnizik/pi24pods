@@ -1,0 +1,13 @@
+uuid: e287bcdc-4bda-4210-8538-7bbebc0f9142
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: MF5tnL2lS-tHsArCtC93g5eunA3kueDRtdG3BO_dn_Y
+name: 'Organic fields'
+vid: organic_fields
+description: 'USDA-certified organic means that the operation has been certified by an accredited organic certifying agent or is transitioning'
+weight: 0

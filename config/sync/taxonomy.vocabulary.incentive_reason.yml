@@ -1,0 +1,13 @@
+uuid: c207c3ec-deba-4706-a49c-31e643e15d86
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: T2bAz6O0_C7FT8jXOe9crEqV52zOYPzhIyy7ar6P7ms
+name: 'Incentive reason'
+vid: incentive_reason
+description: 'List up to four reasons for producer incentive payments. List the top 4 based on total value of the incentive for each reason.'
+weight: 0

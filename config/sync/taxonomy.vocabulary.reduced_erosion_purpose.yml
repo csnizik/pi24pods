@@ -1,0 +1,13 @@
+uuid: cbb25d3d-ef2d-48ca-a05d-82b34caf6fe5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: LgY7uhdyqmUHrOb_HTsGKXI_B-Y0UzF8T4sk3y3LgqM
+name: 'Reduced erosion purpose'
+vid: reduced_erosion_purpose
+description: 'Purpose of tracking reduced erosion the enrolled field.'
+weight: 0

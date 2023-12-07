@@ -1,0 +1,13 @@
+uuid: 0ca11fa2-5e8f-4334-b2be-298240d2c7e7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: Ke30oNeKqIeMnNoJIobcqlE_lVfJfHrb2ifEyA1fJ14
+name: 'Partner type'
+vid: partner_type
+description: 'Legal/financial structure of lead grantee or partner organization'
+weight: 0

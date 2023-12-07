@@ -1,0 +1,13 @@
+uuid: 46182ac7-52f4-4d75-b7ab-95f164102d9f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: SxnXYlmEkEBUZ2IHKfNP1cNzIYi7MIA2_e8oE-ciFoM
+name: 'Marketing assistance provided'
+vid: marketing_assistance_provided
+description: 'Was any marketing assistance provided to the primary operator for the commodity(ies) produced from this field?'
+weight: 0

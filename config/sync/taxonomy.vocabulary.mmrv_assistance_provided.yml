@@ -1,0 +1,13 @@
+uuid: 3d09f9ce-f223-43dd-a4a6-478d3f881a65
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: FaaSF0kDnJQwSb4_ISznFxV0udZd46v7jhfaazmmx7M
+name: 'MMRV assistance provided'
+vid: mmrv_assistance_provided
+description: 'Was any MMRV assistance provided to the primary operator for this field?'
+weight: 0

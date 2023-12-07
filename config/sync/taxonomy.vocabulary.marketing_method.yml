@@ -1,0 +1,13 @@
+uuid: 9b05b638-91d6-4282-b8c5-dcef22e34c72
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: gej35Ld_AVa5u876BALJFKbIVGfwCLXjDy1ZGbSIYO4
+name: 'Marketing method'
+vid: marketing_method
+description: 'Provide the method(s) used to market this commodity in this market channel.'
+weight: 0

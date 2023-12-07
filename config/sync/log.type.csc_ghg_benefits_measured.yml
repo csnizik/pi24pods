@@ -1,0 +1,15 @@
+uuid: 0d815bf0-8e67-49f8-b8bf-4a7c10bbc871
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: gkYiQNLKqJPH5Vd5504_7nyhKAxhEfDtHb_QWujKEMg
+id: csc_ghg_benefits_measured
+label: 'GHG Benefits - Measured'
+description: 'GHG Benefits - Measured'
+name_pattern: 'GHG Benefits Measured log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,13 @@
+uuid: 33014555-9a27-4f2d-9bd3-7117d745257f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 1lsqWfHLNRIJcUJxK3jx8w76L2hgVSZoTxbkzOSeE3Q
+name: 'Field GHG monitoring'
+vid: field_ghg_monitoring
+description: 'Up to the top three forms of monitoring GHG benefits as part of MMRV requirements.'
+weight: 0

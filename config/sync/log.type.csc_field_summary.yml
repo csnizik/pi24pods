@@ -1,0 +1,15 @@
+uuid: 1d457ad5-7b5b-4869-97c1-3ecd13bef103
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: a5Qmf7DAvTmBx3GBqC-7b_1NgCSMFwHyZJ25tFM5_kI
+id: csc_field_summary
+label: 'Field Summary'
+description: 'Field Summary'
+name_pattern: 'Field Summary log [log:id]'
+workflow: log_default
+new_revision: true

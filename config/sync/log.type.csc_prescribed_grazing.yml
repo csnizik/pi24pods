@@ -1,0 +1,15 @@
+uuid: fec7841b-1169-45ae-994e-911763425128
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: qmLs7SkkYVEheMFyvQiXGEyLzAqn6W_y1PqY4-qrkH4
+id: csc_prescribed_grazing
+label: 'Prescribed Grazing'
+description: 'Prescribed Grazing'
+name_pattern: 'Prescribed Grazing log [log:id]'
+workflow: log_default
+new_revision: true

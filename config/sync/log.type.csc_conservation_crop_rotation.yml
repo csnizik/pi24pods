@@ -1,0 +1,15 @@
+uuid: e0ec51cf-92e1-475a-b5af-67a9bf86a389
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: F1kU3n82qdz2DuN5FTLo09lCZb7lQ3yzAcJba6fP74U
+id: csc_conservation_crop_rotation
+label: 'Conservation Crop Rotation'
+description: 'Conservation Crop Rotation'
+name_pattern: 'Conservation Crop Rotation log [log:id]'
+workflow: log_default
+new_revision: true

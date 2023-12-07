@@ -7,6 +7,7 @@ module:
   block: 0
   breakpoint: 0
   cig_pods: 0
+  cig_pods_csc: 0
   config: 0
   config_update: 0
   config_update_ui: 0
@@ -55,6 +56,7 @@ module:
   farm_ui_user: 0
   farm_ui_views: 0
   farm_unit: 0
+  farm_update: 0
   field: 0
   field_ui: 0
   file: 0
@@ -78,6 +80,7 @@ module:
   path_alias: 0
   quantity: 0
   rest: 0
+  scss: 0
   select2: 0
   serialization: 0
   simple_oauth: 0
@@ -95,9 +98,8 @@ module:
   user: 0
   views_geojson: 0
   views_ui: 0
-  scss_compiler: 1
-  scss: 0
   pods_config_overrides: 1
+  scss_compiler: 1
   externalauth: 10
   views: 10
   farm: 1000

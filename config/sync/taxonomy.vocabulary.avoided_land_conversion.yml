@@ -1,0 +1,13 @@
+uuid: f133c217-e09d-4899-b9f3-fa9b12e65c8a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: KA0ZeA-pEca1hcIByLkikLDcgViSfZplJrB-Bh4KT3s
+name: 'Avoided land conversion'
+vid: avoided_land_conversion
+description: 'Tracking of avoided land conversion in the enrolled field.'
+weight: 0

@@ -1,0 +1,15 @@
+uuid: 66979cc6-7298-406b-bc4d-b20b43932e90
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: fgL82Dzp4vJOwtfsFPqO5wfL00I-E1YoM-eYEBpgCbA
+id: csc_conservation_cover
+label: 'Conservation Cover'
+description: 'Conservation Cover'
+name_pattern: 'Conservation Cover log [log:id]'
+workflow: log_default
+new_revision: true

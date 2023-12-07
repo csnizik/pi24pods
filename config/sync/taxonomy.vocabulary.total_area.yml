@@ -1,0 +1,13 @@
+uuid: 4bd140c6-1ca9-4b3d-898c-8d74e8a0a72b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: L6ki-hGFiqahgrJcgNB4gicaOrgpwahBas8tPk_5pDs
+name: 'Total area'
+vid: total_area
+description: 'Total area of the farm associated with the Farm ID.'
+weight: 0

@@ -1,0 +1,15 @@
+uuid: cdd817ed-c74f-4d50-ae05-37266bca579e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: _TaGNbe-kIrL1Nh54tCwZlySKjg79QEmp98QvxMB-Hs
+id: csc_farm_summary
+label: 'Farm Summary'
+description: 'Farm Summary'
+name_pattern: 'Farm Summary log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,15 @@
+uuid: b07e02da-054a-487a-930f-0bc016eb7ca7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: WKBz4fD1HwucKp58iijY2evF_hyCGs6XDCt7NpMq2WM
+id: csc_ghg_benefits_alt_modeled
+label: 'GHG Benefits - Alternate Modeled'
+description: 'GHG Benefits - Alternate Modeled'
+name_pattern: 'GHG Benefits Alternate Modeled log [log:id]'
+workflow: log_default
+new_revision: true

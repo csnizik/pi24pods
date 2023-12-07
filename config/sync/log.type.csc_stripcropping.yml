@@ -1,0 +1,15 @@
+uuid: 01cb2004-9d3b-4d49-a471-4541ab694c5f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 0xOSt18Xj9UuTjhdr4cIWkdVsSd9zRuH7RQKkdHYglk
+id: csc_stripcropping
+label: Stripcropping
+description: Stripcropping
+name_pattern: 'Stripcropping log [log:id]'
+workflow: log_default
+new_revision: true

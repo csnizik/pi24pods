@@ -1,0 +1,13 @@
+uuid: 392b386e-58ed-4391-a50d-3350da0d35ed
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 75KnbFr-2qkBRbLXG8WzBt9YQR5i9ZVA0mwcuw6Fag0
+name: 'Training provided'
+vid: training_provided
+description: 'Types of training provided to the project partner as a result of participating in the project during the past quarter.'
+weight: 0

@@ -1,0 +1,13 @@
+uuid: 4d3ecc55-0155-4305-b8a7-3c94c54b6907
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 6g91IIBGi6auaewK_nuQ5Jw49H4kXOZIXRcwvEb4Ih4
+name: 'CSAF federal funds'
+vid: csaf_federal_funds
+description: 'If this farm (under the primary operator) has implemented CSAF practices in the last ten years, was implementation supported by '
+weight: 0

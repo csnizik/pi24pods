@@ -1,0 +1,13 @@
+uuid: bb7d9759-f923-45e6-99a9-562010cd3b1e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: gfRU6q0OMWkGS9XFI0MyTqgdevsMdkolB6dGNaEFkhE
+name: 'Reduction in phosphorus loss'
+vid: reduction_in_phosphorus_loss
+description: 'Tracking of reductions in phosphorus losses in the enrolled field.'
+weight: 0

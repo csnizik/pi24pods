@@ -1,0 +1,15 @@
+uuid: ea707597-84ab-455a-b74a-413006f50c87
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 54-zU-9iAl4SJsDPIVvcE0mzSR5tDNBKcvJm-FTYHUg
+id: csc_combustion_sys_improvement
+label: 'Combustion System Improvement'
+description: 'Combustion System Improvement'
+name_pattern: 'Combustion System Improvement log [log:id]'
+workflow: log_default
+new_revision: true

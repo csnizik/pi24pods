@@ -1,0 +1,15 @@
+uuid: f2f7e2f3-79bf-4d7f-9241-19e55d3fc46a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: snYi4l9peU5QHs7FZkptypiFoP6HEBym0lvLp5-ff5M
+id: csc_residue_till_reduced_till
+label: 'Residue Tillage Management Reduced Till'
+description: 'Residue Tillage Management Reduced Till'
+name_pattern: 'Residue Tillage Management Reduced Till log [log:id]'
+workflow: log_default
+new_revision: true

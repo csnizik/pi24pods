@@ -1,0 +1,13 @@
+uuid: b7bd91e6-699d-4200-ae1c-23d8e0c13a3d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: ythj_JNKlhUhEtYqR8S6V8pTb-t7jqZxbTQdalY1oJ4
+name: 'Livestock type'
+vid: livestock_type
+description: 'Up to top three types of livestock (by head count) on the farm.'
+weight: 0

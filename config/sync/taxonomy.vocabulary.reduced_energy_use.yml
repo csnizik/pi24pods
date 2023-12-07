@@ -1,0 +1,13 @@
+uuid: b4dfd753-6f8f-4d26-b176-c1f7d0e15e89
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 2TiTRB5OfTXaCfl8SayGi4dZBu7aLsvd8g1V4qHqQpU
+name: 'Reduced energy use'
+vid: reduced_energy_use
+description: 'Tracking of reduced energy use in the enrolled field.'
+weight: 0

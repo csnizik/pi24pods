@@ -1,0 +1,13 @@
+uuid: fdd55147-3982-4d63-9dda-450b7765d928
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: qFXcfpRftzYPQTPGDrkfmOXPGDz45j6Ak-Mumk_XJQE
+name: 'Commodity Term'
+vid: commodity_term
+description: 'Type of Commodity(ies)'
+weight: 0

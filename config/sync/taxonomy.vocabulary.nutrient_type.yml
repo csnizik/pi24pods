@@ -1,0 +1,13 @@
+uuid: 78dbdd70-a39a-4d25-bc72-98416e6a17c9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: Gt97biELqnpsR1S55GDMiBGlhuX_yY93_uvgT8Konzo
+name: 'Nutrient Type'
+vid: nutrient_type
+description: ''
+weight: 0

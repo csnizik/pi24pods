@@ -1,0 +1,13 @@
+uuid: 865a8611-e110-49ee-a040-7b6bca207160
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: LuDPFTfC_f7IsRGbuFBuy5WKez8orw7vXVYsft40_8A
+name: 'Practice past extent'
+vid: practice_past_extent
+description: 'Prior to enrollment, on what portion of the whole farm had this (these) CSAF practice(s) ever been used by the primary operator?'
+weight: 0

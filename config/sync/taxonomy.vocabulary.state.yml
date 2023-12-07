@@ -1,0 +1,13 @@
+uuid: 61fb54b6-02bd-4294-947b-ce68a785abe3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 7mJFcXGJZGxq-ZTv8JTkZ3i_e4uwgrkpM4i-mQLxbZM
+name: State
+vid: state
+description: 'Abbreviation of the State'
+weight: 0

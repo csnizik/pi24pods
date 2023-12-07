@@ -1,0 +1,13 @@
+uuid: 19ed9034-215f-4f45-bc66-f3d9e5f09cab
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: M6PbllBtOrTk9oz3sArnXlYBNrBMbE1brvTuZwmkkPY
+name: 'Other water quality purpose'
+vid: other_water_quality_purpose
+description: 'Purpose of tracking other water quality benefits in the enrolled field.'
+weight: 0

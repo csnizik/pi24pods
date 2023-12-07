@@ -1,0 +1,13 @@
+uuid: 7533ad5d-d3dd-4568-b369-b33d2d5b623e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: mTFnlzFXqyI7Q60nPt1WwQIYpk__w54GEW4sYsWSu0Y
+name: 'Field official GHG calculation'
+vid: field_official_ghg_calculation
+description: 'List the method used to calculate the official GHG benefits in this field that are reported as part of the project’s aggregate i'
+weight: 0

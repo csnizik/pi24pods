@@ -1,0 +1,13 @@
+uuid: e52c6664-2cfe-4607-a990-de2c089b2a12
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: IGYKKt1DdqUDIRxa-wXQtuf1N2VantmkVaNVhNNtzEg
+name: 'Waste Storage System'
+vid: waste_storage_system
+description: ''
+weight: 0

@@ -1,0 +1,13 @@
+uuid: cf5cd78a-bf7b-4789-9d96-8c56017c4245
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: TpfNmQyWWlvMf6bOlUPiUHdQiYed4Ju5E61ybPTvP2Y
+name: 'Avoided land conversion amount unit'
+vid: avoided_land_conversion_amount_u
+description: 'Unit for the total amount of avoided land conversion that is measured in the enrolled field.'
+weight: 0

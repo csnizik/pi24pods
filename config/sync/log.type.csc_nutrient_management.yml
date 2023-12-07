@@ -1,0 +1,15 @@
+uuid: a4e8cf6d-aa0f-4cf7-82e8-f92eb206f663
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: gbVex3xwmGdPlayLr3vp5LXmjiqyQOhmX_d1qSnaGAM
+id: csc_nutrient_management
+label: 'Nutrient Management'
+description: 'Nutrient Management'
+name_pattern: 'Nutrient Management log [log:id]'
+workflow: log_default
+new_revision: true

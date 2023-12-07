@@ -1,0 +1,15 @@
+uuid: efb7024b-c038-4f61-8842-5239c73e19e3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: iGMRUUtjWXL9-KQl0wvfzSYfqt4rgqX0bUL0YxpmAYY
+id: csc_hedgerow_planting
+label: 'Hedgerow Planting'
+description: 'Hedgerow Planting'
+name_pattern: 'Hedgerow Planting [log:id]'
+workflow: log_default
+new_revision: true

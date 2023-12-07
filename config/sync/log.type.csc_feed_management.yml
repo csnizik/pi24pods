@@ -1,0 +1,15 @@
+uuid: e9dad52a-b38e-458e-af04-b052fd8d6d0d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: b4a3ryEgqVdtz7RNDZiWNyKsJlBbZU0OJnuBRh5ZD4g
+id: csc_feed_management
+label: 'Feed Management'
+description: 'Feed Management'
+name_pattern: 'Feed Management log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,15 @@
+uuid: b72acb52-34f2-4f73-be27-6701f1e957bd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 5rCTjV6A-aQvLbNbjFadiPB_-8EvS0-gKTuCluJc9bc
+id: csc_range_planting
+label: Range_Planting
+description: 'Range Planting'
+name_pattern: 'Range Planting log [log:id]'
+workflow: log_default
+new_revision: true

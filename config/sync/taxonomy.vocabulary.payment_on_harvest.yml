@@ -1,0 +1,13 @@
+uuid: 0f9c37a2-5e02-44b4-ae54-6a094f552eae
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: stFl89V1pAo_kmzG5PFKGnVR4nwWT64kiH35yw4P-Es
+name: 'Payment on harvest'
+vid: payment_on_harvest
+description: 'Any incentive payment provided to the producer upon harvesting or slaughtering the commodity included in the contract.'
+weight: 0

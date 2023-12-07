@@ -1,0 +1,14 @@
+uuid: b97ac1c1-b436-475e-8bc3-e608a7af9a27
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: lZau9YRCaWZOZWmdzCtU3QRqzooBGi7ItQlPe9xyN-c
+id: csc_field_enrollment
+label: 'Field Enrollment'
+description: 'Field Enrollment'
+workflow: asset_default
+new_revision: true

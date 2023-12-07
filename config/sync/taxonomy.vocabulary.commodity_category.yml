@@ -1,0 +1,13 @@
+uuid: b6ccb90b-164a-4d86-89bb-e1c0fe9c8a94
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: YKa0qYwoS0Q7tOgO-siyGwraVlinR2DcDkjUWi30kns
+name: 'Commodity category'
+vid: commodity_category
+description: 'Category of commodity(ies) produced in field enrolled in the project'
+weight: 0

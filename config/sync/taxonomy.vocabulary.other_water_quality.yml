@@ -1,0 +1,13 @@
+uuid: c3912adf-d4e9-41d6-8263-65b23459d032
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: eUXWH5bSg3kSMzIRqqEs7B7UDU6yDKe5Jhu6nCciTso
+name: 'Other water quality'
+vid: other_water_quality
+description: 'Project tracking of other water quality metrics in the enrolled field.'
+weight: 0

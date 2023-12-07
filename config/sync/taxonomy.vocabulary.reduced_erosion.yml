@@ -1,0 +1,13 @@
+uuid: 7aa8c19f-30c9-4f06-8844-6e4a569d223f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: lAYPTz8K2BxjPnKE0tJxNFXgSDFEFUEZ_JwcA7-IUAs
+name: 'Reduced erosion'
+vid: reduced_erosion
+description: 'Tracking of reduced soil erosion in the enrolled field.'
+weight: 0

@@ -1,0 +1,13 @@
+uuid: e5d13cfa-d427-47d9-891c-238866ff93fd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: AOaCr8NUun1vd6X5_p807kQ1Snu0aWCevXJd-AqWYxk
+name: 'GHG calculation methods'
+vid: ghg_calculation_methods
+description: 'List the way(s) that GHG benefits are being measured and calculated by the project this quarter.'
+weight: 0

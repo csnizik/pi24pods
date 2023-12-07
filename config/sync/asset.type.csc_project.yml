@@ -1,0 +1,14 @@
+uuid: 904b0591-a977-439d-866f-4b6188aba230
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 4X4hBGQh7qtcWAKl_FHra7dHEXn72gyL2whS25FDuIg
+id: csc_project
+label: Project
+description: Project
+workflow: asset_default
+new_revision: true

@@ -1,0 +1,13 @@
+uuid: c349a649-6b5a-4453-8ea6-bdc785f4c6a4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: TbRwWRKJ-GY0wVmSuS4PsHGaWZqoQFvUaw-T01jlrk0
+name: 'Reduction in phosphorus loss purpose'
+vid: reduction_in_phosphorus_loss_pur
+description: 'Purpose of tracking reduction in phosphorus losses in the enrolled field.'
+weight: 0

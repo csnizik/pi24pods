@@ -1,0 +1,13 @@
+uuid: 6068364d-d37d-4390-8bd8-f6f1df6a8954
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: igGSXmMMBozrK_UuK93jpVLvBv2BD65CT0drwSJ979s
+name: 'GHG model'
+vid: ghg_model
+description: 'Select the model used for the alternate calculation of the field’s GHG benefits.'
+weight: 0

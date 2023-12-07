@@ -1,0 +1,13 @@
+uuid: 8873f14b-6b20-4ec9-a3ba-c155776a6876
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: edHIiuKympIWMzv5t7Pp7eQOwWHugEJqSPUAixZZl2Y
+name: County
+vid: county
+description: 'List of County Names'
+weight: 0

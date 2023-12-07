@@ -1,0 +1,13 @@
+uuid: c15baeae-1945-46e8-984b-78a4f6919cdb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: MPhZS1AjxYacfrbyBYarsirRsakWnW0B6VngXdhh48w
+name: 'Incentive type'
+vid: incentive_type
+description: 'List the top 4 types of incentive payments to producers (based on dollar value).'
+weight: 0

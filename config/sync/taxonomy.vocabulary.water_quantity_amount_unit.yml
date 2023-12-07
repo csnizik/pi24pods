@@ -1,0 +1,13 @@
+uuid: c48dc886-f334-40eb-b7a0-c1b50dc3179f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: dHDdHmI51w7HWhcsRYmn8p3wIG1iyXg9Y63LrFcgJTg
+name: 'Water quantity amount unit'
+vid: water_quantity_amount_unit
+description: 'Unit for the total amount of water conservation or reduced use that is measured and reported in the enrolled field.'
+weight: 0

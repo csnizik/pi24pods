@@ -1,0 +1,15 @@
+uuid: 36b03b68-b164-4849-804a-20557fca13e4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: UJ3oUFKUoclW8JaAlvA7GzV9ftaceLAMiNSkc46r7u4
+id: csc_forest_farming
+label: 'Forest Farming'
+description: 'Forest Farming'
+name_pattern: 'Forest Farming log [log:id]'
+workflow: log_default
+new_revision: true

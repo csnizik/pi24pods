@@ -1,0 +1,13 @@
+uuid: d7f63516-657c-416b-aa1f-98a511279d51
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: riwsHahXj0NX_aT0bp95ChF8qhLyNOsdoO4YvYE_jnQ
+name: 'GHG monitoring method'
+vid: ghg_monitoring_method
+description: 'Up to the five most common forms of monitoring GHG benefits used this quarter as part of MMRV requirements.'
+weight: 0

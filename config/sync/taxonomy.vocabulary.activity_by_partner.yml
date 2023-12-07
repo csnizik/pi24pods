@@ -1,0 +1,13 @@
+uuid: 395c9932-2dea-4e8c-b918-8f00fe2c5e9a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: qvBpotZB99r4fbysY3w9rXQ3aVWxBWGWP8PO3vUqueM
+name: 'Activity by partner'
+vid: activity_by_partner
+description: 'Types of activities that the lead grantee or partner organization has provided during the reporting quarter.'
+weight: 0

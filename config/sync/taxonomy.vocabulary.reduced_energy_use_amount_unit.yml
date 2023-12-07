@@ -1,0 +1,13 @@
+uuid: c330c4dc-c95f-48e3-9bc4-52881234339f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: thrgAGuy3NOZ-V68fXYWQ3QBG6nvFvKyh3UiInwnkd0
+name: 'Reduced energy use amount unit'
+vid: reduced_energy_use_amount_unit
+description: 'Unit for the total amount of energy use reduction that is measured in the enrolled field.'
+weight: 0

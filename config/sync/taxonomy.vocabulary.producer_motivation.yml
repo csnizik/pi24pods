@@ -1,0 +1,13 @@
+uuid: c98e42ba-e7b4-457e-9601-5226ca0561bd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: y-V2Gg_7WpLNmg3a0dcLacTrrYE4kTb9QBcOVrCRhtw
+name: 'Producer motivation'
+vid: producer_motivation
+description: 'Primary operator’s motivation for enrolling in the project'
+weight: 0

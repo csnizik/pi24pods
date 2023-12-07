@@ -1,0 +1,13 @@
+uuid: 2f57b028-3ed9-4e4a-b088-1afbb61918c0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 0KdleLJvJ0fcZbL_It-70Tuv1z84Hs3pUi9L8aC9AW0
+name: 'Improved wildlife habitat'
+vid: improved_wildlife_habitat
+description: 'Tracking of improvements to wildlife in and around the enrolled field.'
+weight: 0

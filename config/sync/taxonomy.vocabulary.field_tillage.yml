@@ -1,0 +1,13 @@
+uuid: a265c792-d2a6-4f2f-84ea-2e21e1a5d93b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: AKCfHJAA-3SKM3sQFOR4kMpLEnEspsJOMdCSKjvr0WI
+name: 'Field tillage'
+vid: field_tillage
+description: 'Prior to enrollment, what was the most common tillage approach during the past 3 years?'
+weight: 0

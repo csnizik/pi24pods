@@ -1,0 +1,13 @@
+uuid: 827187d9-d081-4a97-9f0e-146b1eea4f7c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: oGyK9Eu-er20vINpp_0rYI379gq0JSmmNAvbczpBVuA
+name: 'Water quantity'
+vid: water_quantity
+description: 'Tracking of water conservation or reduction in use in the enrolled field.'
+weight: 0

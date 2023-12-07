@@ -1,0 +1,14 @@
+uuid: 89f4175b-03ab-4c9c-bf15-9b4b6f40e6ac
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: mdPvjMIR6pcpSmpvV9ErjKt9DmofPj5c23x4KqtqY0s
+id: csc_import_history
+label: 'Import Attempt History'
+description: 'Import Attempt History'
+workflow: asset_default
+new_revision: true

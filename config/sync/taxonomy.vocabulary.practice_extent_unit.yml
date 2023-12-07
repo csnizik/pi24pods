@@ -1,0 +1,13 @@
+uuid: d984f90b-1912-4bd1-978b-9c242d875d1f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: vrfyI9WSOy4ah_kpVQuo3zii-uxpvpQKUrlM8rAG6T4
+name: 'Practice extent unit'
+vid: practice_extent_unit
+description: 'Unit for extent of practice implementation on the field specified by the contract.'
+weight: 0

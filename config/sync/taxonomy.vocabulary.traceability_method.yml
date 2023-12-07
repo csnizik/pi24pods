@@ -1,0 +1,13 @@
+uuid: 6202fa3f-5a7d-420c-9e77-c75e03fb87a7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 9inIPl2EzoyFPyA9jaa9vBxLVMRc6oMwVDbP8ZGxYqo
+name: 'Traceability method'
+vid: traceability_method
+description: 'Provide the traceability method(s) used for the climate-smart commodity in this market channel.'
+weight: 0

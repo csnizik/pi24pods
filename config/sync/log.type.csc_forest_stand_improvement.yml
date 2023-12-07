@@ -1,0 +1,15 @@
+uuid: 6cccc698-ae9d-43e2-a1db-b369e44e46ce
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 0DnUOasJVyX2Vu0Ar26TMM7SdOwDco8AxbRDsfSgCnQ
+id: csc_forest_stand_improvement
+label: 'Forest Stand Improvement'
+description: 'Forest Stand Improvement'
+name_pattern: 'Forest Stand Improvement [log:id]'
+workflow: log_default
+new_revision: true

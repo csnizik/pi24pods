@@ -1,0 +1,15 @@
+uuid: 3804539a-b358-4f19-abeb-75a72ed3faa9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: rd1oeC2TsBYkJFbWLf5-Ka3ZjcNEqHWu2X60V2N8qzE
+id: csc_mulching
+label: Mulching
+description: Mulching
+name_pattern: 'Mulching log [log:id]'
+workflow: log_default
+new_revision: true

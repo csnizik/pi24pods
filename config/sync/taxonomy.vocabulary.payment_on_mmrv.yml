@@ -1,0 +1,13 @@
+uuid: 00a4f2b0-200b-40d6-8e62-cd6a3ddd2179
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: p9Av6zVkqSd4Ap4MfsPoIl6q9R9U0xQ3gl_5D05tD-0
+name: 'Payment on MMRV'
+vid: payment_on_mmrv
+description: 'Any incentive payment provided to the producer upon completing the annual MMRV requirements included in the contract'
+weight: 0

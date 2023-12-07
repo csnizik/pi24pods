@@ -1,0 +1,13 @@
+uuid: e618cb13-1f8f-4a74-b6c9-152d27295c31
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: hx2YwU1fiCJFNUUPcbTKnS-LMo_UVSUlNMi3KELVDsQ
+name: 'Improved wildlife habitat amount unit'
+vid: improved_wildlife_habitat_amount
+description: 'Unit for the total amount of improved wildlife habitat that is measured in and around enrolled fields.'
+weight: 0

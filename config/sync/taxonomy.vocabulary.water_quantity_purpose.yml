@@ -1,0 +1,13 @@
+uuid: 4493aaec-e8d0-4449-a6a1-820a5a74a3ac
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: jf49sqq3_QphBlEa0TTTrSGe_0ag7Zfc6Qo0NGAemXI
+name: 'Water quantity purpose'
+vid: water_quantity_purpose
+description: 'Purpose of tracking water conservation or reductions in water use in the enrolled field.'
+weight: 0

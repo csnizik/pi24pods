@@ -1,0 +1,13 @@
+uuid: 7b4244a2-a18a-4c74-8b44-edee0ecd39b9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: OHr5lSxHihcTtOAgLF0bGjVAUv8jCcBF7Him0tBnDvs
+name: 'GHG cumulative calculation'
+vid: ghg_cumulative_calculation
+description: 'List the method(s) that was used to calculate the total cumulative GHG benefits reported by the project this quarter.'
+weight: 0

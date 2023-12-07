@@ -1,0 +1,13 @@
+uuid: e8cdaa04-9a6e-494d-9f6e-6d3814584d0e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: UiiHybJL0AgEJMOYvSDffsBmNq31RE5yPzgqBaQhpSU
+name: 'Baseline yield location'
+vid: baseline_yield_location
+description: 'Location of the reported average annual yield of commodity in 3 years prior to enrollment'
+weight: 0

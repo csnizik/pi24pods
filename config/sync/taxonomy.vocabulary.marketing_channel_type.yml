@@ -1,0 +1,13 @@
+uuid: db2577c4-2997-46ee-8900-b6a630688a17
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: a3BXRgOp5HHlk-w7hVgZ-EFEHKQ0TTyMfhHPiXxEXfo
+name: 'Marketing channel type'
+vid: marketing_channel_type
+description: 'List a single type of marketing channel used to sell the commodity produced by farmers enrolled in the project.'
+weight: 0

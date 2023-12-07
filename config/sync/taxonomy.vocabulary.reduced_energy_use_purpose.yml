@@ -1,0 +1,13 @@
+uuid: 07ee8d1a-0ce1-4428-92d3-8a693e05d232
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 6Khyn7o_XDmr0_EX9wzp9tIwa0XpsQUx5jaKns8Sg9I
+name: 'Reduced energy use purpose'
+vid: reduced_energy_use_purpose
+description: 'Purpose of tracking reduced energy use in the enrolled field.'
+weight: 0

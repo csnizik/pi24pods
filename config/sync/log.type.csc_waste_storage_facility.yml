@@ -1,0 +1,15 @@
+uuid: dcf7ce4e-23b7-4ddd-be47-8d57246b14eb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: cvozWf2fW_LQsdzQsQ2OEWML3I1ooZgjnwQAaHYRzPg
+id: csc_waste_storage_facility
+label: 'Waste Storage Facility'
+description: 'Waste Storage Facility'
+name_pattern: 'Waste Storage Facility log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,13 @@
+uuid: 55526911-30c2-442f-8b05-70902a578149
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: ZYr359dXSrr9o718ZgLu5RQXm3DNULEj66ZvLLxOrFs
+name: 'Match type'
+vid: match_type
+description: 'Types of match contributions other than incentives provided directly to producers by the organization from the start of the part'
+weight: 0

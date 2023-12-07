@@ -1,0 +1,15 @@
+uuid: 768592d2-4c6e-4b25-9d32-91ada121296c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: agS2CjRoBBZWObPSCYOJgClqFvrVKSvoWSqbjiSQVpM
+id: csc_tree_shrub_establishment
+label: 'Tree Shrub Establishment'
+description: 'Tree Shrub Establishment'
+name_pattern: 'Tree Shrub Establishment log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,15 @@
+uuid: af53b504-54b3-4faa-955a-f055046cc474
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: spU9qinlWqMqjqgI2PNECasCkdgfpDDB43WiyQsJENI
+id: csc_market_activities
+label: 'Market Activities'
+description: 'Market Activities'
+name_pattern: 'Market Activities log [log:id]'
+workflow: log_default
+new_revision: true

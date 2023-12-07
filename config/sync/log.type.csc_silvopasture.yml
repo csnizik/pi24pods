@@ -1,0 +1,15 @@
+uuid: 28fd8f5b-48d6-44f2-a24d-b1f743d16ca9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: x6_K3pnnZtvrWo3A2-wKNloe4JevyRIsrhZFXvuFCgE
+id: csc_silvopasture
+label: Silvopasture
+description: Silvopasture
+name_pattern: 'Silvopasture log [log:id]'
+workflow: log_default
+new_revision: true

@@ -1,0 +1,15 @@
+uuid: 77e21710-3ac5-49d5-a559-58f109d479fc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: rOH1qdbFfyjodblgG_AY0EeCtdPifqxV50FOWJse7nY
+id: csc_pasture_hay_planting
+label: 'Pasture and Hay Planting'
+description: 'Pasture and Hay Planting'
+name_pattern: 'Pasture and Hay Planting log [log:id]'
+workflow: log_default
+new_revision: true

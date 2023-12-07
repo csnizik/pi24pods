@@ -1,0 +1,13 @@
+uuid: e72d92bc-9c30-48de-8c24-01b9be707694
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: S096pcsy9jz2tnjDTWyZyaMOOT2kq9AYP2w6LY-sZMg
+name: 'Reduction in nitrogen loss'
+vid: reduction_in_nitrogen_loss
+description: 'Tracking reductions in nitrogen losses in the enrolled field.'
+weight: 0

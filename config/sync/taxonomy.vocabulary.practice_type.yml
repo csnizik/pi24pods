@@ -1,0 +1,13 @@
+uuid: dbda1d30-c1c2-46a3-9202-b12905e5a77d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: hCY2N1WT8Y1uBvKaR3R9LdBZKUPhtZk9u7J_KPvNWag
+name: 'Practice Type'
+vid: practice_type
+description: 'Related Practices'
+weight: 0

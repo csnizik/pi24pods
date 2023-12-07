@@ -1,0 +1,13 @@
+uuid: db40b91f-1d1d-41cf-8d9e-d7346664eb1e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: o1I663yGVEbM5K-3XOTueoJXCkp8B8qlUg-zDw59HjA
+name: 'Other water quality amount unit'
+vid: other_water_quality_amount_unit
+description: 'Unit for the total amount of reduction in other water quality metrics that is measured in the enrolled field.'
+weight: 0

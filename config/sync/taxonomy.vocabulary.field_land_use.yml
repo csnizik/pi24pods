@@ -1,0 +1,13 @@
+uuid: 6bc29e73-2239-499d-9459-38129c003a6b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: oFG1fZchOSxAV338nWeCusW_8xPkbsJs-M9hfwVrvbs
+name: 'Field land use'
+vid: field_land_use
+description: 'Prior to enrollment, what was the most common land use for this field in the past 3 years?'
+weight: 0

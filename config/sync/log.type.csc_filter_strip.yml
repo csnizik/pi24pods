@@ -1,0 +1,15 @@
+uuid: f6031d9e-bd0a-4cd5-9edb-6751afb42694
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: fgz65trMGv4y7b3gSyhPgFtVDhOsEvJkBNXKgz0Li1g
+id: csc_filter_strip
+label: 'Filter Strip'
+description: 'Filter Strip'
+name_pattern: 'Filter Strip log [log:id]'
+workflow: log_default
+new_revision: true

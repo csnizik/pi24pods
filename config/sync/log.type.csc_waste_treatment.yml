@@ -1,0 +1,15 @@
+uuid: c3a37486-8e61-4aa2-bdc9-6f5faab0be03
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: z4izCxwcpqSnFxWy6mFGR8-PFW_bbFdISWFsg_in04I
+id: csc_waste_treatment
+label: 'Waste Treatment'
+description: 'Waste Treatment'
+name_pattern: 'Waste Treatment [log:id]'
+workflow: log_default
+new_revision: true

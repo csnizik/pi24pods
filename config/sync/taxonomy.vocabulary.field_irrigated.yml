@@ -1,0 +1,13 @@
+uuid: af8ee3eb-7653-4216-8a02-b379a26a63ac
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: ptn9YGI90Mnix264lfp5GYV5Gbo_OCEnv3zJjibCVlA
+name: 'Field irrigated'
+vid: field_irrigated
+description: 'Prior to enrollment, what was the most common irrigation practice on this field the past 3 years?'
+weight: 0

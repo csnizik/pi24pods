@@ -1,0 +1,13 @@
+uuid: 8ee6aeac-8658-4719-bba6-ee986962ceb4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: eInAbxVko-1ZpuMucopFRDLXQ37d_Jck4SxiWNqivtM
+name: 'Reduced phosphorus loss amount unit'
+vid: reduced_phosphorus_loss_amount_u
+description: 'Unit for the total amount of reduction in phosphorus losses that is measured in the enrolled field.'
+weight: 0

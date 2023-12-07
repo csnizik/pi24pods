@@ -1,0 +1,13 @@
+uuid: cd7f24dc-8b77-4b48-8e33-64405965f630
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: OtO9G0d7kWZy6XTy9N2vgQyvr9WeodLxCiNmGaLZpkg
+name: 'Incentive structure'
+vid: incentive_structure
+description: 'List the structures (units) corresponding to the top 4 (by dollar value) incentive payments to producers.'
+weight: 0

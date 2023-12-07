@@ -1,0 +1,13 @@
+uuid: 6c48a7aa-a8ed-46d3-ac2c-0b031ef7d022
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: RVcrAduAzf3PgXHMb0J8yoiEntHxY8AxLA6Zm01RUPc
+name: 'Payment on sale'
+vid: payment_on_sale
+description: 'Any incentive payment provided to the producer upon sale of the commodity included in the contract.'
+weight: 0

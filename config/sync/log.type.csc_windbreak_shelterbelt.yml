@@ -1,0 +1,15 @@
+uuid: dec0cc27-989a-4357-836e-0598e82ff86c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: idNC11HP17xrb7mEgf6k0ZfFZ6-appRkW-7XTryh25Y
+id: csc_windbreak_shelterbelt
+label: 'Windbreak Shelterbelt'
+description: 'Windbreak Shelterbelt'
+name_pattern: 'Windbreak Shelterbelt [log:id]'
+workflow: log_default
+new_revision: true

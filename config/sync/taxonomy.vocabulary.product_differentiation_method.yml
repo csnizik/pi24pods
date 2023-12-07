@@ -1,0 +1,13 @@
+uuid: 6ad19a24-e35f-497e-85be-f8c3276175b0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: hCkEEadrZrJ1TZ4-hDQqRSLgi50udC7znxwdx_PGvLw
+name: 'Product differentiation method'
+vid: product_differentiation_method
+description: 'Provide the methods used to differentiate the climate-smart commodity in this market channel.'
+weight: 0

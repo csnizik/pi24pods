@@ -1,0 +1,13 @@
+uuid: b773e7ac-3afb-4cc5-a78b-ebae27b33f93
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: hCijZlaOB6AZW7jTKrCIZ2kVn8DC0EHboESav5r0lGk
+name: 'Practice this field'
+vid: practice_this_field
+description: 'Prior to enrollment, had this (these) CSAF practice(s) been used in this field in the in the past 3 years?'
+weight: 0

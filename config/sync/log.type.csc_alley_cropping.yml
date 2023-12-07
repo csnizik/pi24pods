@@ -1,0 +1,15 @@
+uuid: 8f3918c7-369a-42fa-b533-6c5c395bef3d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: KufMoA7jDD7aDAjnxyTicInNN7dAe7QR4yojoe3ddDg
+id: csc_alley_cropping
+label: 'Alley Cropping'
+description: 'Alley Cropping'
+name_pattern: 'Alley Cropping log [log:id]'
+workflow: log_default
+new_revision: true

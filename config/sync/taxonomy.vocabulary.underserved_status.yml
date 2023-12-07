@@ -1,0 +1,13 @@
+uuid: 96b1736a-9f41-4f0d-be9c-d8e1edd122f7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: PoJPuOynluaL-8tABlAHnHl-hiKTIJzVq1R2neGdUPI
+name: 'Underserved status'
+vid: underserved_status
+description: 'Underserved status of the primary operator of the enrolled operation.'
+weight: 0

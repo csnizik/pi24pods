@@ -1,0 +1,13 @@
+uuid: 57b43593-b4a5-42c1-bc9f-2544da246785
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 1Uyot67KVqP07dTwnsxWANneh9jTPRCd1GsBCdnO5JU
+name: 'Other water quality type'
+vid: other_water_quality_type
+description: 'Type of other water quality metric (besides nitrogen loss and phosphorus loss reductions) that is measured in the field.'
+weight: 0

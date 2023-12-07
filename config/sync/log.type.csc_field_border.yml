@@ -1,0 +1,15 @@
+uuid: f35b437d-d1e7-470b-beb2-f4218fd1062d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 5UwwmKsrpmEEPDM04vczsQQy92hV01KJQ9KeIc6JQKA
+id: csc_field_border
+label: 'Field Border'
+description: 'Field Border'
+name_pattern: 'Field Border log [log:id]'
+workflow: log_default
+new_revision: true

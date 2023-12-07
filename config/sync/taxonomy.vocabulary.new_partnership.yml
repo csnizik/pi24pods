@@ -1,0 +1,13 @@
+uuid: 0fec1706-73d2-4419-ac42-29dcdd059d66
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: Z3vPIZjVbMv_NoJr_oAtVryBrjSorBsLGfl93pDpvKc
+name: 'New partnership'
+vid: new_partnership
+description: 'A new partnership means that the lead grantee and the partner organization have not had a formal working relationship (under con'
+weight: 0

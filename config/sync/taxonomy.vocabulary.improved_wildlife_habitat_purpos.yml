@@ -1,0 +1,13 @@
+uuid: cd8fa268-226d-4fc1-bdfa-d878ed1dc9a9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: fKCRz6UypOAhYHQ0ST63PCOqNkaiJIKhNTNqvqDyZ9g
+name: 'Improved wildlife habitat purpose'
+vid: improved_wildlife_habitat_purpos
+description: 'Purpose of tracking improved wildlife habitat in the enrolled field.'
+weight: 0

@@ -1,0 +1,15 @@
+uuid: 30511378-b261-4f04-9c61-9247d62f60a6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: tECcGYr99LI4LQ9CkQcdjMYatpuU9hkGSFcDA1kRavw
+id: csc_residue_tillage_no_till
+label: 'Residue Tillage Management No Till'
+description: 'Residue Tillage Management No Till'
+name_pattern: 'Residue Tillage Management No Till log [log:id]'
+workflow: log_default
+new_revision: true

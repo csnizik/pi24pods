@@ -1,0 +1,15 @@
+uuid: 7592e429-3511-408f-bdfa-33c960b928bb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cig_pods_csc
+_core:
+  default_config_hash: 4F6v-mzY6FRLmbAbZpBBwI7NKC6n1Goz9ppJw5QwjXg
+id: csc_vegetative_barrier
+label: 'Vegetative Barrier'
+description: 'Vegetative Barrier'
+name_pattern: 'Vegetative Barrier log [log:id]'
+workflow: log_default
+new_revision: true
